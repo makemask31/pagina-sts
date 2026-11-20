@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>STS · Scalari Tech System — Tecnologia segura, feita para pessoas</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="A STS desenvolve sites, cardápios digitais, lojas virtuais, sistemas web e automações seguras para empresas de todo o Brasil. Segurança pensada desde a primeira linha.">
+  <meta name="keywords" content="desenvolvimento de software, cardápio digital, landing page, site institucional, automação whatsapp, cibersegurança, scalari tech system, amparo sp">
+  <meta name="author" content="STS · Scalari Tech System">
+  <meta property="og:title" content="STS · Scalari Tech System — Tecnologia segura, feita para pessoas">
+  <meta property="og:description" content="Criação de sites, sistemas, cardápios digitais e automações inteligentes com segurança desde a primeira linha de código.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0b1b3f">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='%232563eb' d='M8 0h24l-8 13h8L24 32H0l8-13H0z'/></svg>">
+
+  <!-- Google Fonts: Bricolage Grotesque + Instrument Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Header / Navigation Bar -->
+  <nav>
+    <div class="w">
+      <a class="logo" href="#" aria-label="STS Scalari Tech System Página Inicial">
+        <i class="logo-icon"></i>
+        <span>STS</span>
+        <span class="logo-sub">Scalari Tech System</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#solucoes">Soluções</a>
+        <a href="#simulador">Simulador</a>
+        <a href="#seguranca">Segurança</a>
+        <a href="#cases">Projetos</a>
+        <a href="#processo">Como funciona</a>
+        <a href="#planos">Suporte</a>
+        <a href="#faq">Dúvidas</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Theme Switcher Button -->
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar tema claro e escuro" title="Alternar tema">
+          <!-- Sun Icon -->
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon -->
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a class="btn btn-sm" href="#contato">Pedir orçamento</a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button id="mobile-toggle" class="mobile-toggle" type="button" aria-label="Menu de navegação" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="mobile-drawer" role="navigation" aria-label="Menu móvel">
+    <a href="#solucoes">Soluções</a>
+    <a href="#simulador">Simulador de Orçamento</a>
+    <a href="#seguranca">Cibersegurança</a>
+    <a href="#cases">Projetos & Demonstrações</a>
+    <a href="#processo">Como funciona</a>
+    <a href="#planos">Planos de Suporte</a>
+    <a href="#faq">Perguntas Frequentes</a>
+    <a href="#contato" class="btn" style="margin-top:10px;">Falar com um especialista</a>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero" id="inicio">
+    <div class="w hero-grid">
+      <div>
+        <div class="hero-pill">
+          <span class="dot"></span>
+          <span>Segurança por Design & Código de Alta Performance</span>
+        </div>
+        <h1>
+          Tecnologia feita para pessoas.
+          <span>Segura desde a primeira linha.</span>
+        </h1>
+        <p class="hero-desc">
+          A STS cria sites, sistemas, cardápios digitais e automações para empresas de todo o Brasil. Você conta o problema, nós entregamos uma solução que funciona, é testada e continua protegida.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-lg" id="wa-hero" href="#contato">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2 22l5.08-1.35C8.52 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.57 0-3.04-.43-4.32-1.18l-.31-.18-3.08.82.83-3-.2-.33C4.16 14.93 3.75 13.5 3.75 12c0-4.55 3.7-8.25 8.25-8.25s8.25 3.7 8.25 8.25-3.7 8.25-8.25 8.25zm4.52-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.08-.39-.12-.56.12-.17.25-.65.8-.8 1-.15.15-.3.17-.55.05-.25-.12-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.28.37-.43.12-.14.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.02 2.6c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/>
+            </svg>
+            Descobrir o valor do meu projeto
+          </a>
+          <a class="btn o btn-lg" href="#seguranca">
+            Ver como protegemos
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat-item">
+            <b>100%</b>
+            <span>Código Seguro</span>
+          </div>
+          <div class="hero-stat-item">
+            <b>95+</b>
+            <span>PageSpeed Score</span>
+          </div>
+          <div class="hero-stat-item">
+            <b>Zero</b>
+            <span>Jargão Técnico</span>
+          </div>
+          <div class="hero-stat-item">
+            <b>Brasil</b>
+            <span>Atendimento Nacional</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shield Card (Original Preset Enhanced) -->
+      <aside class="shield">
+        <div class="shield-header">
+          <div class="shield-header-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>O que você leva em todo projeto</h3>
+        </div>
+        <ul>
+          <li><span class="check-icon">✓</span> Orçamento claro, sem compromisso e com prazo garantido</li>
+          <li><span class="check-icon">✓</span> Segurança pensada desde a primeira linha de arquitetura</li>
+          <li><span class="check-icon">✓</span> Testes automatizados e validação rigorosa antes da entrega</li>
+          <li><span class="check-icon">✓</span> Atendimento próximo e humano, falando a sua língua</li>
+          <li><span class="check-icon">✓</span> Suporte contínuo e atualizações depois do projeto no ar</li>
+        </ul>
+        <small>Nenhum sistema no mundo é 100% imune a riscos. O papel da STS é reduzi-los ao máximo com método, boas práticas de engenharia e cuidado com a sua empresa.</small>
+      </aside>
+    </div>
+  </header>
+
+  <!-- Quick WhatsApp Contact Selector (Preset Enhancements) -->
+  <section class="pick" id="contato-rapido">
+    <div class="w">
+      <div class="pick-wrapper">
+        <div class="k">Comece em 30 segundos</div>
+        <h2>O que você quer resolver hoje?</h2>
+        <p class="sub">Escolha uma ou mais opções. Conforme você clica, montamos a mensagem do seu WhatsApp automaticamente para agilizar seu atendimento.</p>
+        
+        <div class="chip-controls">
+          <button type="button" id="chips-select-all">Selecionar todos</button>
+          <span>·</span>
+          <button type="button" id="chips-clear-all">Limpar seleção</button>
+        </div>
+
+        <div class="chips" id="chips" role="group" aria-label="Selecione as soluções desejadas"></div>
+
+        <div class="wa-preview-box">
+          <b>Mensagem prévia:</b>
+          <span class="wa-preview-text" id="wa-preview-text">"Olá, STS! Vim pelo site e gostaria de um orçamento..."</span>
+        </div>
+
+        <a class="btn btn-lg wa-btn" id="wa" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2 22l5.08-1.35C8.52 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.57 0-3.04-.43-4.32-1.18l-.31-.18-3.08.82.83-3-.2-.33C4.16 14.93 3.75 13.5 3.75 12c0-4.55 3.7-8.25 8.25-8.25s8.25 3.7 8.25 8.25-3.7 8.25-8.25 8.25zm4.52-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.08-.39-.12-.56.12-.17.25-.65.8-.8 1-.15.15-.3.17-.55.05-.25-.12-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.28.37-.43.12-.14.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.02 2.6c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/>
+          </svg>
+          Pedir orçamento pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Section with Interactive Specification Modals -->
+  <section id="solucoes">
+    <div class="w">
+      <div class="k">Soluções prontas</div>
+      <h2>Escopo e valor definidos, para você começar rápido.</h2>
+      <p class="sub">Cada solução tem investimento pensado para o tamanho do seu negócio. Clique em qualquer card para ver entregáveis, prazos e detalhes técnicos.</p>
+      
+      <div class="grid">
+        <!-- 1. Cardápio digital -->
+        <div class="c solution-card" data-solution="cardapio">
+          <div class="solution-card-header">
+            <div class="solution-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                <line x1="12" y1="18" x2="12.01" y2="18"/>
+              </svg>
+            </div>
+            <span class="badge">Disponível</span>
+          </div>
+          <h3>Cardápio digital</h3>
+          <p>Seu cardápio no celular do cliente via QR Code, atualizado quando você quiser em segundos.</p>
+          <span class="tag">Menos papel, mais vendas</span>
+          <div class="solution-action">
+            <span>Ver detalhes & entregáveis</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+
+        <!-- 2. Cardápio WhatsApp -->
+        <div class="c solution-card" data-solution="cardapio-wa">
+          <div class="solution-card-header">
+            <div class="solution-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="9" cy="21" r="1"/>
+                <circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+              </svg>
+            </div>
+            <span class="badge badge-ok">Mais pedido</span>
+          </div>
+          <h3>Pedidos no WhatsApp</h3>
+          <p>Os pedidos chegam organizados com carrinho, endereço e cálculo de entrega sem intermediários.</p>
+          <span class="tag">Atendimento mais ágil</span>
+          <div class="solution-action">
+            <span>Ver detalhes & entregáveis</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+
+        <!-- 3. Landing page -->
+        <div class="c solution-card" data-solution="landing-page">
+          <div class="solution-card-header">
+            <div class="solution-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+            </div>
+            <span class="badge">Alta Conversão</span>
+          </div>
+          <h3>Landing page</h3>
+          <p>Uma página objetiva e veloz para apresentar sua oferta, captar leads e vender seu serviço.</p>
+          <span class="tag">Feita para converter</span>
+          <div class="solution-action">
+            <span>Ver detalhes & entregáveis</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+
+        <!-- 4. Site institucional -->
+        <div class="c solution-card" data-solution="site-institucional">
+          <div class="solution-card-header">
+            <div class="solution-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <span class="badge">Corporativo</span>
+          </div>
+          <h3>Site institucional</h3>
+          <p>Sua empresa com presença profissional, páginas corporativas estruturadas e autoridade no Google.</p>
+          <span class="tag">Mais credibilidade</span>
+          <div class="solution-action">
+            <span>Ver detalhes & entregáveis</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+
+        <!-- 5. Catálogo online -->
+        <div class="c solution-card" data-solution="catalogo">
+          <div class="solution-card-header">
+            <div class="solution-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <span class="badge">Vitrine</span>
+          </div>
+          <h3>Catálogo online</h3>
+          <p>Seus produtos sempre à vista com fotos, especificações e botão de orçamento por item.</p>
+          <span class="tag">Vitrine sempre aberta</span>
+          <div class="solution-action">
+            <span>Ver detalhes & entregáveis</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+
+        <!-- 6. Loja virtual -->
+        <div class="c solution-card" data-solution="loja-virtual">
+          <div class="solution-card-header">
+            <div class="solution-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 0 1-8 0"/>
+              </svg>
+            </div>
+            <span class="badge">E-commerce</span>
+          </div>
+          <h3>Loja virtual</h3>
+          <p>Venda online de forma estruturada com gateway PIX, cartões e cálculo de frete seguro.</p>
+          <span class="tag">Novo canal de receita</span>
+          <div class="solution-action">
+            <span>Ver detalhes & entregáveis</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+
+        <!-- 7. Blog profissional -->
+        <div class="c solution-card" data-solution="blog">
+          <div class="solution-card-header">
+            <div class="solution-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20h9"/>
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+              </svg>
+            </div>
+            <span class="badge">SEO & Conteúdo</span>
+          </div>
+          <h3>Blog profissional</h3>
+          <p>Conteúdo relevante que atrai visitantes qualificados do Google e fortalece sua autoridade.</p>
+          <span class="tag">Autoridade e visitas</span>
+          <div class="solution-action">
+            <span>Ver detalhes & entregáveis</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+
+        <!-- 8. Automação de atendimento -->
+        <div class="c solution-card" data-solution="automacao">
+          <div class="solution-card-header">
+            <div class="solution-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <span class="badge badge-ok">Inteligência</span>
+          </div>
+          <h3>Automação WhatsApp</h3>
+          <p>Agentes inteligentes e integrações com WhatsApp: respostas instantâneas 24h e equipe livre.</p>
+          <span class="tag">Mais tempo para vender</span>
+          <div class="solution-action">
+            <span>Ver detalhes & entregáveis</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Solution Modal Backdrop -->
+  <div id="solution-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container">
+      <button id="modal-close" class="modal-close" type="button" aria-label="Fechar janela de detalhes">&times;</button>
+      <span id="modal-badge" class="badge modal-badge">Categoria</span>
+      <h3 id="modal-title" class="modal-title">Título da Solução</h3>
+      <p id="modal-desc" class="modal-desc">Descrição completa do serviço.</p>
+      
+      <h4 style="font-size:1.05rem; margin-bottom:12px;">O que está incluso nesta entrega:</h4>
+      <ul id="modal-features" class="modal-features-list"></ul>
+
+      <div class="modal-footer">
+        <span id="modal-timeframe" style="font-weight:600; color:var(--mut); font-size:0.9rem;">Prazo médio: 5 dias úteis</span>
+        <a id="modal-cta" class="btn wa-btn" href="#" target="_blank" rel="noopener">Quero esta solução</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Project Budget & Timeline Calculator (NEW EXCLUSIVE FEATURE) -->
+  <section class="sec-alt" id="simulador">
+    <div class="w">
+      <div class="k">Calculadora de Investimento</div>
+      <h2>Simulador de Projeto em Tempo Real</h2>
+      <p class="sub">Monte o escopo da sua ideia, selecione recursos adicionais e veja uma estimativa inicial transparente de investimento e prazo.</p>
+
+      <div class="calc-card">
+        <div class="calc-grid">
+          <!-- Step by step inputs -->
+          <div>
+            <!-- Step 1 -->
+            <div class="calc-step">
+              <div class="calc-step-title">
+                <span class="step-num">1</span>
+                <span>Qual o tipo de solução que você precisa?</span>
+              </div>
+              <div class="calc-options-grid">
+                <div class="calc-opt selected" data-calc-project="landing">
+                  <b>Landing Page</b>
+                  <small>Foco em conversão</small>
+                </div>
+                <div class="calc-opt" data-calc-project="cardapio">
+                  <b>Cardápio Digital</b>
+                  <small>QR Code / Delivery</small>
+                </div>
+                <div class="calc-opt" data-calc-project="institucional">
+                  <b>Site Institucional</b>
+                  <small>Múltiplas páginas</small>
+                </div>
+                <div class="calc-opt" data-calc-project="loja">
+                  <b>Loja Virtual</b>
+                  <small>E-commerce completo</small>
+                </div>
+                <div class="calc-opt" data-calc-project="automacao">
+                  <b>Automação WhatsApp</b>
+                  <small>Chatbots & IA</small>
+                </div>
+                <div class="calc-opt" data-calc-project="custom">
+                  <b>Sistema Sob Medida</b>
+                  <small>SaaS / Plataforma</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="calc-step">
+              <div class="calc-step-title">
+                <span class="step-num">2</span>
+                <span>Recursos adicionais recomendados</span>
+              </div>
+              <div class="calc-checkboxes">
+                <label class="calc-check">
+                  <input type="checkbox" class="calc-addon-check" value="cms">
+                  <span>Painel de Edição (CMS)</span>
+                </label>
+                <label class="calc-check">
+                  <input type="checkbox" class="calc-addon-check" value="payment">
+                  <span>Checkout PIX/Cartão</span>
+                </label>
+                <label class="calc-check">
+                  <input type="checkbox" class="calc-addon-check" value="chatbot">
+                  <span>Chatbot WhatsApp com IA</span>
+                </label>
+                <label class="calc-check">
+                  <input type="checkbox" class="calc-addon-check" value="seo">
+                  <span>SEO Técnico para o Google</span>
+                </label>
+                <label class="calc-check">
+                  <input type="checkbox" class="calc-addon-check" value="sec">
+                  <span>Blindagem OWASP & LGPD</span>
+                </label>
+                <label class="calc-check">
+                  <input type="checkbox" class="calc-addon-check" value="domain">
+                  <span>Configuração de Domínio e E-mail</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 3 & 4 Grid -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+              <div class="calc-step">
+                <div class="calc-step-title">
+                  <span class="step-num">3</span>
+                  <span>Prazo desejado</span>
+                </div>
+                <label class="calc-check" style="margin-bottom:8px;">
+                  <input type="radio" name="calc-speed" value="normal" checked>
+                  <span>Prazo Padrão</span>
+                </label>
+                <label class="calc-check">
+                  <input type="radio" name="calc-speed" value="urgent">
+                  <span>Expresso Prioritário (-40% tempo)</span>
+                </label>
+              </div>
+
+              <div class="calc-step">
+                <div class="calc-step-title">
+                  <span class="step-num">4</span>
+                  <span>Plano de suporte mensal</span>
+                </div>
+                <label class="calc-check" style="margin-bottom:8px;">
+                  <input type="radio" name="calc-support" value="none" checked>
+                  <span>Sem plano mensal</span>
+                </label>
+                <label class="calc-check" style="margin-bottom:8px;">
+                  <input type="radio" name="calc-support" value="basico">
+                  <span>Básico (R$ 90/mês)</span>
+                </label>
+                <label class="calc-check">
+                  <input type="radio" name="calc-support" value="inter">
+                  <span>Intermediário (R$ 180/mês)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Summary and output -->
+          <div class="calc-summary">
+            <div>
+              <h3>Resumo da Simulação</h3>
+              <div class="calc-summary-item">
+                <span>Solução base:</span>
+                <span id="calc-sum-type">Landing Page</span>
+              </div>
+              <div class="calc-summary-item">
+                <span>Recursos extras:</span>
+                <span id="calc-sum-addons">Sem extras</span>
+              </div>
+              <div class="calc-summary-item">
+                <span>Ritmo de entrega:</span>
+                <span id="calc-sum-speed">Prazo normal</span>
+              </div>
+              <div class="calc-summary-item">
+                <span>Suporte contínuo:</span>
+                <span id="calc-sum-support">Nenhum plano incluso</span>
+              </div>
+            </div>
+
+            <div class="calc-estimate-box">
+              <div class="calc-estimate-label">Estimativa Inicial STS</div>
+              <div class="calc-estimate-val" id="calc-estimate-val">R$ 690</div>
+              <div class="calc-estimate-time" id="calc-estimate-time">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span>Prazo estimado: ~4 dias úteis</span>
+              </div>
+            </div>
+
+            <div>
+              <a class="btn btn-lg wa-btn" id="calc-send-wa" href="#" target="_blank" rel="noopener" style="width:100%;">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2 22l5.08-1.35C8.52 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.57 0-3.04-.43-4.32-1.18l-.31-.18-3.08.82.83-3-.2-.33C4.16 14.93 3.75 13.5 3.75 12c0-4.55 3.7-8.25 8.25-8.25s8.25 3.7 8.25 8.25-3.7 8.25-8.25 8.25zm4.52-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.08-.39-.12-.56.12-.17.25-.65.8-.8 1-.15.15-.3.17-.55.05-.25-.12-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.28.37-.43.12-.14.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.02 2.6c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/>
+                </svg>
+                Solicitar proposta com este escopo
+              </a>
+              <small style="display:block; text-align:center; color:#9fb0d4; margin-top:10px; font-size:0.75rem;">Valores de referência para orientar o projeto. Proposta formal sem custos.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cybersecurity Section with Interactive Auditor Demo -->
+  <section class="sec" id="seguranca">
+    <div class="w">
+      <div class="k">Cibersegurança e confiança</div>
+      <h2>Criar uma página ficou fácil. Criar uma solução segura, não.</h2>
+      <p class="sub">Seus clientes confiam dados e pedidos ao seu negócio. A segurança da sua tecnologia é parte da sua reputação, e na STS ela entra no projeto desde o primeiro dia, não como remendo no final.</p>
+      
+      <div class="grid">
+        <div class="c">
+          <h3>Segurança desde o início</h3>
+          <p>Planejada na arquitetura, antes de escrever a primeira linha, e não corrigida depois do problema.</p>
+        </div>
+        <div class="c">
+          <h3>Dados protegidos</h3>
+          <p>Atenção rigorosa à privacidade, ao controle de acessos e ao tratamento das informações dos clientes (LGPD).</p>
+        </div>
+        <div class="c">
+          <h3>Testado antes de entregar</h3>
+          <p>Validações contínuas para encontrar possíveis falhas antes de você, e jamais depois dos seus clientes.</p>
+        </div>
+        <div class="c">
+          <h3>Código organizado</h3>
+          <p>Boas práticas de engenharia de software que facilitam manutenções futuras com menos brechas e zero retrabalho.</p>
+        </div>
+        <div class="c">
+          <h3>Acompanhamento contínuo</h3>
+          <p>Planos de suporte com monitoramento preventivo, correção de vulnerabilidades e backups frequentes.</p>
+        </div>
+        <div class="c">
+          <h3>Transparência real</h3>
+          <p>Você acompanha o que acontece em cada etapa do projeto, com conversa direta, relatórios claros e sem termos técnicos.</p>
+        </div>
+      </div>
+
+      <!-- Live Interactive Security Audit Simulator -->
+      <div class="audit-demo-card">
+        <div class="audit-header">
+          <div>
+            <h3 style="color:#ffffff; margin-bottom:4px;">Demonstração: Blindagem de Segurança STS</h3>
+            <p style="color:#b8c6e8; font-size:0.9rem; margin:0;">Veja os 6 pilares de proteção que implementamos em cada código entregue:</p>
+          </div>
+          <div class="audit-status">
+            <span class="audit-indicator"></span>
+            <span id="audit-status-text">Status: Camadas ativas e monitoradas</span>
+          </div>
+        </div>
+
+        <div class="audit-list">
+          <div class="audit-item">
+            <div class="audit-item-label">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Proteção Anti-SQLi & XSS</span>
+            </div>
+            <span class="audit-badge">100% Protegido ✓</span>
+          </div>
+          <div class="audit-item">
+            <div class="audit-item-label">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span>Criptografia SSL/TLS & HSTS</span>
+            </div>
+            <span class="audit-badge">100% Protegido ✓</span>
+          </div>
+          <div class="audit-item">
+            <div class="audit-item-label">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span>Sanitização Rigorosa de Inputs</span>
+            </div>
+            <span class="audit-badge">100% Protegido ✓</span>
+          </div>
+          <div class="audit-item">
+            <div class="audit-item-label">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/></svg>
+              <span>Rate Limiting & Anti-DDoS</span>
+            </div>
+            <span class="audit-badge">100% Protegido ✓</span>
+          </div>
+          <div class="audit-item">
+            <div class="audit-item-label">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              <span>Conformidade com LGPD</span>
+            </div>
+            <span class="audit-badge">100% Protegido ✓</span>
+          </div>
+          <div class="audit-item">
+            <div class="audit-item-label">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <span>Monitoramento & Logs Seguros</span>
+            </div>
+            <span class="audit-badge">100% Protegido ✓</span>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:flex-end;">
+          <button id="run-audit-btn" class="btn btn-sm wht" type="button">
+            Testar Diagnóstico Visual
+          </button>
+        </div>
+      </div>
+
+      <div class="note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+        </svg>
+        <span>Somos honestos: nenhum sistema é totalmente imune a riscos. O que fazemos é reduzi-los com método, responsabilidade técnica e cuidado com cada cliente.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Portfolio & Case Mockup Showcase (NEW EXCLUSIVE FEATURE) -->
+  <section id="cases">
+    <div class="w">
+      <div class="k">Projetos & Entregas</div>
+      <h2>Resultados que geram receita e confiança.</h2>
+      <p class="sub">Veja na prática como entregamos soluções completas para diferentes modelos de negócios.</p>
+
+      <div class="portfolio-tabs">
+        <button class="portfolio-tab-btn active" data-case="food">Gastronomia / Cardápio WhatsApp</button>
+        <button class="portfolio-tab-btn" data-case="b2b">Advocacia / Landing Page B2B</button>
+        <button class="portfolio-tab-btn" data-case="saas">Tecnologia / Automação com IA</button>
+      </div>
+
+      <div class="case-card">
+        <div class="case-content">
+          <span id="case-category" class="badge">Cardápio Digital & Pedidos no WhatsApp</span>
+          <h3 id="case-title" style="font-size:1.6rem; margin:12px 0;">Don Corleone Pizzaria Artesanal</h3>
+          <p id="case-desc" style="color:var(--mut); line-height:1.6;">Eliminação de 100% dos custos com impressão física e economia de 18% em taxas de aplicativos de delivery com envio direto ao WhatsApp da cozinha.</p>
+          
+          <div class="case-metrics-grid">
+            <div class="metric-box">
+              <b id="case-m1-val">99/100</b>
+              <span id="case-m1-lbl">PageSpeed Mobile</span>
+            </div>
+            <div class="metric-box">
+              <b id="case-m2-val">+42%</b>
+              <span id="case-m2-lbl">Aumento em vendas diretas</span>
+            </div>
+          </div>
+
+          <a class="btn wa-btn" href="#contato">Quero um projeto com esse padrão</a>
+        </div>
+
+        <div class="case-preview-frame">
+          <div class="mockup-window">
+            <div class="mockup-bar">
+              <div class="mockup-circle"></div>
+              <div class="mockup-circle"></div>
+              <div class="mockup-circle"></div>
+              <span style="font-size:0.75rem; color:var(--mut); margin-left:8px;">sts.preview.app</span>
+            </div>
+            <div class="mockup-body" id="case-preview-body"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section (VS) -->
+  <section class="sec-alt">
+    <div class="w">
+      <div class="k">Nosso diferencial</div>
+      <h2>Qualquer um cria uma página. Poucos constroem uma solução.</h2>
+      <p class="sub">Ferramentas prontas ajudam todo mundo a começar. O que nos diferencia é saber usá-las com conhecimento de engenharia de software e responsabilidade.</p>
+      
+      <div class="vs">
+        <div class="c no">
+          <h3>Uma página qualquer</h3>
+          <ul>
+            <li>Funciona no primeiro dia, quebra na primeira atualização</li>
+            <li>Segurança fica para depois (ou é ignorada)</li>
+            <li>Ninguém testou de verdade antes de entregar</li>
+            <li>Entregue e esquecida pelo freelancer</li>
+            <li>Sem suporte técnico ou proteção de dados</li>
+          </ul>
+        </div>
+        <div class="c yes">
+          <span class="yes-badge">Padrão STS</span>
+          <h3>Uma solução STS</h3>
+          <ul>
+            <li>Funciona perfeitamente e continua funcionando</li>
+            <li>Segurança pensada desde o início da arquitetura</li>
+            <li>Testada e validada em múltiplos dispositivos</li>
+            <li>Atendimento humano e suporte do começo ao fim</li>
+            <li>Total conformidade com boas práticas e LGPD</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why STS (6 Pillars) -->
+  <section style="padding-top:0">
+    <div class="w">
+      <div class="k">Por que a STS</div>
+      <h2>Seis motivos para começar seu projeto com a gente.</h2>
+      <div class="grid" style="margin-top:36px">
+        <div class="c">
+          <h3>Visão técnica</h3>
+          <p>Somos programadores reais. Arquitetura robusta pensada para durar e escalar sem retrabalho.</p>
+        </div>
+        <div class="c">
+          <h3>Segurança de verdade</h3>
+          <p>Proteção de dados e boas práticas presentes desde a primeira linha de código.</p>
+        </div>
+        <div class="c">
+          <h3>Feito sob medida</h3>
+          <p>Parte da necessidade real da sua empresa, e não de um modelo genérico copiado da internet.</p>
+        </div>
+        <div class="c">
+          <h3>Atendimento próximo</h3>
+          <p>Conversa humana, sem jargão técnico. Ouvimos e entendemos antes de programar.</p>
+        </div>
+        <div class="c">
+          <h3>Clareza no projeto</h3>
+          <p>Você sabe exatamente o que acontece em cada etapa, sem surpresas de custos ou prazos.</p>
+        </div>
+        <div class="c">
+          <h3>Tecnologia acessível</h3>
+          <p>Investimento justo, viável para pequenos negócios e escalável para grandes empresas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Steps -->
+  <section id="processo" style="padding-top:0">
+    <div class="w">
+      <div class="k">Como trabalhamos</div>
+      <h2>Um processo simples, do primeiro papo à entrega.</h2>
+      <div class="steps">
+        <div class="step-card">
+          <b>Entendemos</b>
+          <span>Ouvimos sua ideia, analisamos suas dores e mapeamos a melhor solução técnica.</span>
+        </div>
+        <div class="step-card">
+          <b>Planejamos</b>
+          <span>Definimos o escopo detalhado, prazo de entrega e orçamento claro sem letras miúdas.</span>
+        </div>
+        <div class="step-card">
+          <b>Desenvolvemos</b>
+          <span>Construímos sua solução com técnica refinada, segurança ativa e design moderno.</span>
+        </div>
+        <div class="step-card">
+          <b>Testamos</b>
+          <span>Validamos responsividade, segurança e velocidade antes de liberar o acesso.</span>
+        </div>
+        <div class="step-card">
+          <b>Entregamos</b>
+          <span>Colocamos no ar, treinamos sua equipe e continuamos cuidando da evolução do projeto.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Scale -->
+  <section style="padding-top:0">
+    <div class="w">
+      <div class="k">Do simples ao complexo</div>
+      <h2>Pequeno ou grande, todo projeto começa igual: com uma conversa.</h2>
+      <div class="grid" style="margin-top:32px">
+        <div class="c">
+          <h3>Soluções prontas</h3>
+          <p>Para quem precisa de agilidade: cardápios digitais, sites institucionais, landing pages e lojas com escopo e prazos definidos.</p>
+        </div>
+        <div class="c">
+          <h3>Projetos sob medida</h3>
+          <p>Para quem tem uma ideia exclusiva: sistemas internos, plataformas SaaS, integrações de APIs e agentes inteligentes sob demanda.</p>
+        </div>
+        <div class="c">
+          <h3>Produtos próprios</h3>
+          <p>Plataformas digitais e ferramentas proprietárias de produtividade desenvolvidas pela STS para diversos setores da economia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support Plans (Planos de Manutenção) -->
+  <section class="sec-alt" id="planos">
+    <div class="w">
+      <div class="k">Depois da entrega</div>
+      <h2>Seu projeto continua sempre bem cuidado.</h2>
+      <p class="sub">Não abandonamos você após a entrega. Nossos planos de suporte garantem que sua tecnologia continue segura, rápida e em constante evolução.</p>
+
+      <div class="grid plans">
+        <!-- Básico -->
+        <div class="c">
+          <h3>Básico</h3>
+          <p>O essencial para manter tudo funcionando sem dores de cabeça.</p>
+          <div class="plan-price">
+            <b>R$ 90</b>
+            <span>/mês</span>
+          </div>
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Correção de falhas e bugs</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Atualizações essenciais de segurança</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Backups periódicos na nuvem</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Suporte em horário comercial</span>
+            </li>
+          </ul>
+          <button class="btn o" data-plan-btn="Básico" type="button" style="margin-top:auto;">Escolher Básico</button>
+        </div>
+
+        <!-- Intermediário (Destaque) -->
+        <div class="c f">
+          <span class="plan-featured-badge">Mais Escolhido</span>
+          <h3>Intermediário</h3>
+          <p>Para empresas que precisam de pequenos ajustes mensais e acompanhamento próximo.</p>
+          <div class="plan-price">
+            <b>R$ 180</b>
+            <span>/mês</span>
+          </div>
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Tudo incluso no plano Básico</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Alterações mensais de textos, banners e preços</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Monitoramento ativo de estabilidade</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Suporte prioritário via WhatsApp</span>
+            </li>
+          </ul>
+          <button class="btn" data-plan-btn="Intermediário" type="button" style="margin-top:auto;">Escolher Intermediário</button>
+        </div>
+
+        <!-- Premium -->
+        <div class="c">
+          <h3>Premium</h3>
+          <p>Acompanhamento completo, suporte ágil e evolução constante da sua ferramenta.</p>
+          <div class="plan-price">
+            <b>R$ 350</b>
+            <span>/mês</span>
+          </div>
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Tudo do plano Intermediário</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Desenvolvimento de novas funcionalidades</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Otimização contínua de velocidade e SEO</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Atendimento emergencial em até 2 horas</span>
+            </li>
+          </ul>
+          <button class="btn o" data-plan-btn="Premium" type="button" style="margin-top:auto;">Escolher Premium</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive FAQ Section (NEW EXCLUSIVE FEATURE) -->
+  <section id="faq">
+    <div class="w">
+      <div class="k">Perguntas Frequentes</div>
+      <h2 style="text-align:center; margin:0 auto;">Tudo o que você precisa saber antes de começar.</h2>
+      <p class="sub" style="text-align:center; margin:14px auto 36px;">Transparência total desde o início. Se tiver outra dúvida, basta nos chamar no WhatsApp.</p>
+
+      <div class="faq-list">
+        <!-- Q1 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Quanto tempo leva para meu projeto ficar pronto?</span>
+            <span class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Projetos como Landing Pages e Cardápios Digitais costumam ser entregues em média de 3 a 5 dias úteis. Sites institucionais levam entre 7 e 12 dias úteis, e e-commerces ou sistemas sob medida variam conforme a complexidade. Todos os prazos são formalizados em contrato antes do início.
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>O site/sistema será 100% meu ou fico preso a mensalidades?</span>
+            <span class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            O projeto é 100% de propriedade da sua empresa! Nós entregamos os códigos, acessos de hospedagem e domínio. Você não é obrigado a assinar planos mensais; eles são oferecidos como uma comodidade caso queira que a STS cuide de atualizações e suporte contínuo.
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Como a STS garante a segurança do meu sistema?</span>
+            <span class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Adotamos a metodologia "Security by Design". Isso significa que não usamos plugins piratas, escrevemos código limpo com sanitização contra ataques de injeção (SQLi/XSS), configuramos certificados de criptografia SSL/TLS, aplicamos políticas de cabeçalhos seguros (HSTS) e validamos os requisitos da LGPD.
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Como funciona a forma de pagamento?</span>
+            <span class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Facilitamos via PIX com desconto à vista ou parcelado no cartão de crédito em até 12x. Para a maioria dos projetos, trabalhamos com entrada de 50% no início e 50% na aprovação e entrega final.
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Eu mesmo consigo alterar textos e preços depois?</span>
+            <span class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Sim! No caso de cardápios, lojas e blogs, fornecemos um painel administrativo intuitivo e gravamos um vídeo tutorial personalizado demonstrando como cadastrar pratos, produtos ou editar informações em minutos.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Functional Contact & Proposal Section (NEW EXCLUSIVE FEATURE) -->
+  <section class="contact-section" id="contato">
+    <div class="w">
+      <div class="k">Entre em contato</div>
+      <h2>Tem uma ideia? Vamos transformá-la em solução.</h2>
+      <p class="sub">Orçamento claro, transparente e sem compromisso. Preencha os campos abaixo e decida se quer enviar direto pelo WhatsApp ou receber a proposta detalhada por e-mail.</p>
+
+      <div class="contact-grid">
+        <!-- Direct contact details -->
+        <div class="contact-info-card">
+          <h3 style="margin-bottom:20px;">Informações de Atendimento</h3>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div class="contact-info-text">
+              <b>WhatsApp Direto</b>
+              <a href="https://wa.me/5519983326884" target="_blank" rel="noopener">(19) 99833-2688</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="contact-info-text">
+              <b>Localização</b>
+              <span>Amparo, São Paulo · Atendimento em todo o Brasil</span>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div class="contact-info-text">
+              <b>Horário de Atendimento</b>
+              <span>Segunda a Sexta das 08h às 18h</span>
+            </div>
+          </div>
+
+          <div style="margin-top:32px; padding-top:20px; border-top:1px solid #223c78;">
+            <p style="font-size:0.875rem; color:#93a6d3;">Garantimos sigilo e segurança integral das informações da sua ideia ou empresa.</p>
+          </div>
+        </div>
+
+        <!-- Validated Lead Form -->
+        <div class="contact-form-card">
+          <h3 style="margin-bottom:8px;">Formulário de Proposta Formal</h3>
+          <p style="color:#b8c6e8; font-size:0.9rem; margin-bottom:24px;">Preencha com seus dados para gerarmos seu orçamento sem compromisso.</p>
+
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="form-name">Seu Nome *</label>
+                <input class="form-input" type="text" id="form-name" placeholder="Ex: Roberto Silva" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-phone">WhatsApp com DDD *</label>
+                <input class="form-input" type="tel" id="form-phone" placeholder="(19) 99999-9999" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="form-email">Seu Melhor E-mail</label>
+                <input class="form-input" type="email" id="form-email" placeholder="seuemail@empresa.com.br">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-service">Solução Principal</label>
+                <select class="form-select" id="form-service">
+                  <option value="Landing Page">Landing Page de Alta Conversão</option>
+                  <option value="Cardápio Digital">Cardápio Digital com QR Code</option>
+                  <option value="Cardápio WhatsApp">Cardápio com Pedidos no WhatsApp</option>
+                  <option value="Site Institucional">Site Institucional</option>
+                  <option value="Catálogo Online">Catálogo Online de Produtos</option>
+                  <option value="Loja Virtual">Loja Virtual Completa</option>
+                  <option value="Automação WhatsApp">Automação de Atendimento & IA</option>
+                  <option value="Projeto Sob Medida">Sistema Web Sob Medida</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-msg">Fale um pouco sobre o projeto ou desafio</label>
+              <textarea class="form-textarea" id="form-msg" rows="3" placeholder="Ex: Preciso de uma página rápida para vender meus serviços de consultoria e receber leads no WhatsApp..."></textarea>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:12px; margin-top:24px;">
+              <button class="btn btn-lg wa-btn" id="btn-submit-wa" type="button">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2 22l5.08-1.35C8.52 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.57 0-3.04-.43-4.32-1.18l-.31-.18-3.08.82.83-3-.2-.33C4.16 14.93 3.75 13.5 3.75 12c0-4.55 3.7-8.25 8.25-8.25s8.25 3.7 8.25 8.25-3.7 8.25-8.25 8.25zm4.52-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.08-.39-.12-.56.12-.17.25-.65.8-.8 1-.15.15-.3.17-.55.05-.25-.12-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.28.37-.43.12-.14.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.02 2.6c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/>
+                </svg>
+                Enviar proposta formatada pelo WhatsApp
+              </button>
+
+              <button class="btn o" id="btn-submit-email" type="button" style="color:#ffffff !important; border-color:#2b4488;">
+                Solicitar Proposta por E-mail
+              </button>
+            </div>
+            <div class="form-help" style="text-align:center;">Seus dados são protegidos e jamais compartilhados com terceiros.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Banner (Preset Preservation) -->
+  <section class="cta">
+    <div class="w">
+      <h2>Transforme sua ideia em tecnologia de verdade.</h2>
+      <p>Orçamento claro e sem compromisso, direto pelo WhatsApp da STS. Você conta a ideia, nós voltamos com uma proposta transparente.</p>
+      <a class="btn btn-lg wht" id="wa2" href="#" target="_blank" rel="noopener">
+        Descobrir o valor do meu projeto agora
+      </a>
+      <div class="row">
+        <div class="row-item">
+          <b>1. Conversa</b>
+          Você conta a ideia ou o problema do seu negócio.
+        </div>
+        <div class="row-item">
+          <b>2. Proposta</b>
+          Orçamento claro e detalhado, sem custos ou letras miúdas.
+        </div>
+        <div class="row-item">
+          <b>3. Entrega Segura</b>
+          Desenvolvido com técnica, validações e suporte pós-entrega.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="w">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a class="logo" href="#" style="margin-bottom:14px;">
+            <i class="logo-icon"></i>
+            <span>STS · Scalari Tech System</span>
+          </a>
+          <p style="color:#93a6d3; font-size:0.9rem; max-width:28em; line-height:1.6;">
+            Tecnologia feita para pessoas. Inovação desenvolvida para transformar e proteger os negócios de todo o Brasil.
+          </p>
+          <div style="font-size:0.85rem; color:#7084ad; margin-top:12px;">
+            Sede: Amparo, São Paulo · Atendimento Nacional
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Soluções</h4>
+          <ul class="footer-links">
+            <li><a href="#solucoes">Cardápio Digital & QR Code</a></li>
+            <li><a href="#solucoes">Landing Pages de Conversão</a></li>
+            <li><a href="#solucoes">Sites Institucionais</a></li>
+            <li><a href="#solucoes">Lojas Virtuais & E-commerce</a></li>
+            <li><a href="#solucoes">Automações WhatsApp & IA</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#simulador">Simulador de Custos</a></li>
+            <li><a href="#seguranca">Cibersegurança</a></li>
+            <li><a href="#planos">Planos de Suporte</a></li>
+            <li><a href="#faq">Dúvidas Frequentes</a></li>
+            <li><a href="#contato">Fale com a STS</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <script>document.write(new Date().getFullYear())</script> STS · Scalari Tech System. Todos os direitos reservados.</span>
+        <span>Amparo - SP · WhatsApp: (19) 99833-2688</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button & Interactive Chat Popover -->
+  <div id="wa-floating-btn" class="wa-floating-btn" role="button" aria-label="Abrir atendimento no WhatsApp" title="Falar com a STS">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2 22l5.08-1.35C8.52 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.57 0-3.04-.43-4.32-1.18l-.31-.18-3.08.82.83-3-.2-.33C4.16 14.93 3.75 13.5 3.75 12c0-4.55 3.7-8.25 8.25-8.25s8.25 3.7 8.25 8.25-3.7 8.25-8.25 8.25zm4.52-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.08-.39-.12-.56.12-.17.25-.65.8-.8 1-.15.15-.3.17-.55.05-.25-.12-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.28.37-.43.12-.14.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.02 2.6c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/>
+    </svg>
+  </div>
+
+  <!-- WhatsApp Popover Chat -->
+  <div id="wa-popover" class="wa-popover">
+    <div class="wa-popover-header">
+      <div class="wa-popover-title">
+        <div class="wa-popover-avatar">STS</div>
+        <div>
+          <b style="font-size:0.9rem; color:#fff; display:block;">Atendimento STS</b>
+          <div class="wa-popover-status">Online agora</div>
+        </div>
+      </div>
+      <span id="wa-popover-close" class="wa-popover-close">&times;</span>
+    </div>
+    <div class="wa-popover-body">
+      <div class="wa-bubble">
+        Olá! 👋 Bem-vindo à <b>Scalari Tech System</b>. Como podemos ajudar seu negócio a crescer com tecnologia segura hoje?
+      </div>
+      <div class="wa-quick-options">
+        <button class="wa-quick-btn" data-msg="Olá! Gostaria de um orçamento para Landing Page.">
+          🚀 Quero uma Landing Page rápida
+        </button>
+        <button class="wa-quick-btn" data-msg="Olá! Quero saber mais sobre o Cardápio com pedidos no WhatsApp.">
+          🍕 Cardápio Digital no WhatsApp
+        </button>
+        <button class="wa-quick-btn" data-msg="Olá! Gostaria de conversar sobre um projeto sob medida para minha empresa.">
+          💼 Projeto sob medida / Sistema Web
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Voltar ao topo da página" title="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Logs & runtime
+.DS_Store
+Thumbs.db
+*.log
+
+# Dependencies & Build
+node_modules/
+.vercel
+dist/
+build/

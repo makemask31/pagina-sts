@@ -1,0 +1,4451 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>STS · Scalari Tech System — Tecnologia segura, feita para pessoas</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="A STS desenvolve sites, cardápios digitais, lojas virtuais, sistemas web e automações seguras para empresas de todo o Brasil. Segurança pensada desde a primeira linha.">
+  <meta name="keywords" content="desenvolvimento de software, cardápio digital, landing page, site institucional, automação whatsapp, cibersegurança, scalari tech system, amparo sp">
+  <meta name="author" content="STS · Scalari Tech System">
+  <meta property="og:title" content="STS · Scalari Tech System — Tecnologia segura, feita para pessoas">
+  <meta property="og:description" content="Criação de sites, sistemas, cardápios digitais e automações inteligentes com segurança desde a primeira linha de código.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0b1b3f">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='%232563eb' d='M8 0h24l-8 13h8L24 32H0l8-13H0z'/></svg>">
+
+  <!-- Google Fonts: Bricolage Grotesque + Instrument Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <style>
+/* ==========================================================================
+   STS · Scalari Tech System - Design System & Stylesheet
+   Preset: Bricolage Grotesque + Instrument Sans | Navy + Blue + Sky + Dark Mode
+   ========================================================================== */
+
+:root {
+  /* Color Palette - Light Mode */
+  --bg: #f6f8fc;
+  --bg-alt: #edf2f9;
+  --fg: #0b1b3f;
+  --fg-strong: #050d24;
+  --mut: #51607f;
+  --mut-light: #7b8ba8;
+  --card: #ffffff;
+  --card-hover: #ffffff;
+  --line: #dbe3f2;
+  --line-light: #e8eef8;
+  
+  /* Brand Accent Colors */
+  --blue: #2563eb;
+  --blue-hover: #1d4fc4;
+  --blue-subtle: rgba(37, 99, 235, 0.08);
+  --blue-border: rgba(37, 99, 235, 0.25);
+  --sky: #3b82f6;
+  --sky-light: #60a5fa;
+  --sky-glow: rgba(59, 130, 246, 0.15);
+  
+  /* Deep Navy */
+  --navy: #0b1b3f;
+  --navy-dark: #071230;
+  --navy-card: #0f2250;
+  --navy-border: #223c78;
+  --navy-line: #2b4488;
+  
+  /* Functional Colors */
+  --ok: #12a36b;
+  --ok-glow: rgba(18, 163, 107, 0.15);
+  --danger: #e11d48;
+  --danger-bg: rgba(225, 29, 72, 0.08);
+  --warning: #f59e0b;
+  --wa-green: #25d366;
+  --wa-dark: #128c7e;
+
+  /* Typography */
+  --font-heading: "Bricolage Grotesque", "Instrument Sans", system-ui, -apple-system, sans-serif;
+  --font-body: "Instrument Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Layout & Shadows */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(11, 27, 63, 0.05);
+  --shadow-md: 0 4px 14px rgba(11, 27, 63, 0.08);
+  --shadow-lg: 0 10px 30px rgba(11, 27, 63, 0.12);
+  --shadow-glow: 0 0 25px rgba(37, 99, 235, 0.25);
+
+  --transition-fast: 0.18s ease;
+  --transition-normal: 0.28s ease;
+  --nav-height: 70px;
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] {
+  --bg: #07122b;
+  --bg-alt: #0b183a;
+  --fg: #eaf0ff;
+  --fg-strong: #ffffff;
+  --mut: #9fb0d4;
+  --mut-light: #7084ad;
+  --card: #0e1e47;
+  --card-hover: #122452;
+  --line: #1c2e5c;
+  --line-light: #16244a;
+  --blue-subtle: rgba(59, 130, 246, 0.15);
+  --blue-border: rgba(96, 165, 250, 0.3);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 14px 36px rgba(0, 0, 0, 0.45);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #07122b;
+    --bg-alt: #0b183a;
+    --fg: #eaf0ff;
+    --fg-strong: #ffffff;
+    --mut: #9fb0d4;
+    --mut-light: #7084ad;
+    --card: #0e1e47;
+    --card-hover: #122452;
+    --line: #1c2e5c;
+    --line-light: #16244a;
+    --blue-subtle: rgba(59, 130, 246, 0.15);
+    --blue-border: rgba(96, 165, 250, 0.3);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 14px 36px rgba(0, 0, 0, 0.45);
+  }
+}
+
+/* ==========================================================================
+   Base & Resets
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + 16px);
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  position: relative;
+}
+
+/* Progress bar on top */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--blue), var(--sky-light));
+  z-index: 1001;
+  transition: width 0.1s linear;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.15;
+  color: var(--fg-strong);
+  letter-spacing: -0.015em;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 3px solid var(--sky-light);
+  outline-offset: 3px;
+}
+
+/* Container */
+.w {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==========================================================================
+   Typography Utilities
+   ========================================================================== */
+.k {
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.k::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--blue);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--blue);
+}
+
+.sub {
+  color: var(--mut);
+  font-size: 1.125rem;
+  max-width: 42em;
+  margin: 14px 0 36px;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: clamp(1.85rem, 3.8vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* ==========================================================================
+   Buttons & Badges
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--blue);
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 13px 24px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  font-size: 0.975rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+  text-align: center;
+}
+
+.btn:hover {
+  background: var(--blue-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn.o {
+  background: transparent;
+  color: var(--fg) !important;
+  border: 1px solid var(--line);
+  box-shadow: none;
+}
+
+.btn.o:hover {
+  background: var(--card);
+  border-color: var(--blue);
+  color: var(--blue) !important;
+}
+
+.btn.wht {
+  background: #ffffff;
+  color: var(--navy) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.btn.wht:hover {
+  background: #f1f5f9;
+  transform: translateY(-1px);
+}
+
+.btn.wa-btn {
+  background: var(--wa-green);
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+}
+
+.btn.wa-btn:hover {
+  background: #1eb956;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+}
+
+.btn-lg {
+  padding: 16px 32px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-size: 0.775rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  background: var(--blue-subtle);
+  color: var(--blue);
+  border: 1px solid var(--blue-border);
+}
+
+.badge-ok {
+  background: var(--ok-glow);
+  color: var(--ok);
+  border-color: rgba(18, 163, 107, 0.3);
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--navy);
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background-color var(--transition-normal);
+}
+
+nav .w {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-height);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.logo-icon {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background: var(--blue);
+  clip-path: polygon(25% 0, 100% 0, 75% 40%, 100% 40%, 75% 100%, 0 100%, 25% 60%, 0 60%);
+  filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.4));
+  transition: transform var(--transition-fast);
+}
+
+.logo:hover .logo-icon {
+  transform: scale(1.08) rotate(4deg);
+}
+
+.logo-sub {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #93a6d3;
+  margin-left: 2px;
+  padding-left: 10px;
+  border-left: 1px solid #2b4488;
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .logo-sub {
+    display: inline-block;
+  }
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  font-size: 0.925rem;
+  font-weight: 500;
+}
+
+nav .nav-links a:not(.btn) {
+  color: #c9d6f2;
+  position: relative;
+  padding: 6px 0;
+}
+
+nav .nav-links a:not(.btn):hover,
+nav .nav-links a.active {
+  color: #ffffff;
+}
+
+nav .nav-links a:not(.btn)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--sky-light);
+  transition: width var(--transition-fast);
+}
+
+nav .nav-links a:not(.btn):hover::after,
+nav .nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.theme-toggle svg {
+  width: 19px;
+  height: 19px;
+}
+
+.icon-sun { display: none; }
+.icon-moon { display: block; }
+
+[data-theme="dark"] .icon-sun { display: block; }
+[data-theme="dark"] .icon-moon { display: none; }
+
+/* Mobile Menu Toggle Button */
+.mobile-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  color: #ffffff;
+}
+
+.mobile-toggle span {
+  width: 20px;
+  height: 2px;
+  background: #ffffff;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.mobile-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile Drawer */
+.mobile-drawer {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  width: 100%;
+  background: var(--navy-dark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transform: translateY(-120%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 999;
+}
+
+.mobile-drawer.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.mobile-drawer a:not(.btn) {
+  color: #c9d6f2;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mobile-drawer a:not(.btn):hover {
+  color: #ffffff;
+}
+
+@media (max-width: 820px) {
+  nav .nav-links {
+    display: none;
+  }
+  .mobile-toggle {
+    display: flex;
+  }
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero {
+  background: var(--navy);
+  color: #ffffff;
+  padding: 80px 0 96px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.18) 0%, transparent 60%),
+              radial-gradient(circle at 10% 90%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -140px;
+  top: -100px;
+  width: 580px;
+  height: 580px;
+  border: 1px solid rgba(43, 68, 136, 0.45);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero .hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(107, 147, 255, 0.35);
+  color: #cbe0ff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 22px;
+}
+
+.hero-pill span.dot {
+  width: 8px;
+  height: 8px;
+  background: #3ddc97;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #3ddc97;
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5.2vw, 3.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: var(--sky-light);
+  display: block;
+}
+
+.hero p.hero-desc {
+  color: #c3d0ee;
+  font-size: 1.15rem;
+  max-width: 36em;
+  margin: 0 0 32px;
+  line-height: 1.65;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.hero .btn.o {
+  color: #ffffff !important;
+  border-color: #3f5999;
+}
+
+.hero .btn.o:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--sky-light);
+  color: var(--sky-light) !important;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+}
+
+.hero-stat-item b {
+  display: block;
+  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  color: #ffffff;
+}
+
+.hero-stat-item span {
+  font-size: 0.825rem;
+  color: #9fb0d4;
+}
+
+/* Hero Shield Card */
+.shield {
+  background: var(--navy-card);
+  border: 1px solid var(--navy-line);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+  position: relative;
+  backdrop-filter: blur(8px);
+}
+
+.shield-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.shield-header-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(59, 130, 246, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sky-light);
+}
+
+.shield h3 {
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.shield ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.shield li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid #223c78;
+  font-size: 0.95rem;
+  color: #dbe5ff;
+}
+
+.shield li .check-icon {
+  color: #3ddc97;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.shield small {
+  display: block;
+  color: #93a6d3;
+  margin-top: 18px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  border-top: 1px dashed #223c78;
+  padding-top: 14px;
+}
+
+@media (max-width: 900px) {
+  .hero .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* ==========================================================================
+   Section Layouts
+   ========================================================================== */
+section {
+  padding: 84px 0;
+  position: relative;
+}
+
+section.sec-alt {
+  background-color: var(--bg-alt);
+}
+
+.sec {
+  background: var(--navy);
+  color: #ffffff;
+}
+
+.sec h2, .sec h3 {
+  color: #ffffff;
+}
+
+.sec .sub {
+  color: #b8c6e8;
+}
+
+.sec .k {
+  color: var(--sky-light);
+}
+
+.sec .k::before {
+  background: var(--sky-light);
+  box-shadow: 0 0 10px var(--sky-light);
+}
+
+.sec .c {
+  background: #0f2250;
+  border-color: #2b4488;
+}
+
+.sec .c p {
+  color: #b8c6e8;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.c {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 26px;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+}
+
+.c:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue-border);
+}
+
+.c h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.c p {
+  margin: 0;
+  color: var(--mut);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  flex-grow: 1;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--ok);
+  background: var(--ok-glow);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  align-self: flex-start;
+}
+
+/* ==========================================================================
+   Quick WhatsApp Picker (Preset Enhancements)
+   ========================================================================== */
+.pick {
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+  padding: 64px 0;
+}
+
+.pick-wrapper {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0 28px;
+}
+
+.chip {
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--fg);
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  font: 500 0.95rem var(--font-body);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+.chip:hover {
+  border-color: var(--blue);
+  background: var(--blue-subtle);
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.chip .chip-check {
+  display: none;
+  font-size: 0.8rem;
+}
+
+.chip[aria-pressed="true"] .chip-check {
+  display: inline-block;
+}
+
+.chip-controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+}
+
+.chip-controls button {
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+.chip-controls button:hover {
+  color: var(--blue-hover);
+}
+
+.wa-preview-box {
+  background: var(--card);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+  color: var(--mut);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wa-preview-box b {
+  color: var(--fg);
+}
+
+.wa-preview-text {
+  font-style: italic;
+  color: var(--fg-strong);
+  word-break: break-word;
+}
+
+/* ==========================================================================
+   Solutions & Detailed Service Modal
+   ========================================================================== */
+.solution-card {
+  position: relative;
+  cursor: pointer;
+}
+
+.solution-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.solution-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--blue-subtle);
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
+}
+
+.solution-card:hover .solution-icon {
+  transform: scale(1.1);
+  background: var(--blue);
+  color: #ffffff;
+}
+
+.solution-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.solution-action {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--line-light);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.solution-card:hover .solution-action svg {
+  transform: translateX(4px);
+}
+
+.solution-action svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-fast);
+}
+
+/* Solution Modal */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(7, 18, 48, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-container {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  max-width: 680px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  transform: scale(0.95);
+  transition: transform 0.25s ease;
+  position: relative;
+  padding: 36px;
+}
+
+.modal-backdrop.active .modal-container {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  color: var(--mut);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.modal-close:hover {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.modal-badge {
+  margin-bottom: 12px;
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.modal-desc {
+  color: var(--mut);
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+}
+
+.modal-features-list {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.modal-features-list li {
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  background: var(--card);
+}
+
+.modal-features-list li:last-child {
+  border-bottom: none;
+}
+
+.modal-features-list li svg {
+  color: var(--ok);
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+
+/* ==========================================================================
+   Interactive Quote Calculator (Simulador de Projetos)
+   ========================================================================== */
+.calc-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+  margin-top: 40px;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.9fr;
+  gap: 40px;
+}
+
+@media (max-width: 900px) {
+  .calc-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.calc-step {
+  margin-bottom: 28px;
+}
+
+.calc-step-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.step-num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.calc-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.calc-opt {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  cursor: pointer;
+  background: var(--bg);
+  transition: all var(--transition-fast);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calc-opt:hover {
+  border-color: var(--blue);
+  background: var(--card);
+}
+
+.calc-opt.selected {
+  border-color: var(--blue);
+  background: var(--blue-subtle);
+  box-shadow: 0 0 0 1px var(--blue);
+}
+
+.calc-opt b {
+  font-size: 0.925rem;
+  display: block;
+}
+
+.calc-opt small {
+  font-size: 0.775rem;
+  color: var(--mut);
+  margin-top: 4px;
+}
+
+.calc-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.calc-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  background: var(--bg);
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+}
+
+.calc-check:hover {
+  border-color: var(--blue);
+}
+
+.calc-check input[type="checkbox"] {
+  accent-color: var(--blue);
+  width: 18px;
+  height: 18px;
+}
+
+/* Calculator Summary Box */
+.calc-summary {
+  background: var(--navy);
+  color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--navy-line);
+  box-shadow: 0 10px 30px rgba(7, 18, 48, 0.4);
+}
+
+.calc-summary h3 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--navy-line);
+  padding-bottom: 12px;
+}
+
+.calc-summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 8px 0;
+  color: #b8c6e8;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.calc-summary-item span:last-child {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.calc-estimate-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin: 24px 0;
+  text-align: center;
+}
+
+.calc-estimate-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--sky-light);
+  margin-bottom: 6px;
+}
+
+.calc-estimate-val {
+  font-size: 2.2rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.calc-estimate-time {
+  font-size: 0.875rem;
+  color: #3ddc97;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* ==========================================================================
+   Cybersecurity Interactive Auditor / Demo
+   ========================================================================== */
+.audit-demo-card {
+  background: #0f2250;
+  border: 1px solid #2b4488;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  margin-top: 36px;
+}
+
+.audit-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.audit-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #b8c6e8;
+}
+
+.audit-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #3ddc97;
+  box-shadow: 0 0 10px #3ddc97;
+}
+
+.audit-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.audit-item {
+  background: rgba(11, 27, 63, 0.6);
+  border: 1px solid #223c78;
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #eaf0ff;
+  transition: all var(--transition-fast);
+}
+
+.audit-item.active-test {
+  border-color: var(--sky-light);
+  background: rgba(59, 130, 246, 0.15);
+}
+
+.audit-item-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.audit-badge {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  background: rgba(61, 220, 151, 0.15);
+  color: #3ddc97;
+  border: 1px solid rgba(61, 220, 151, 0.3);
+}
+
+.note {
+  margin-top: 28px;
+  padding: 18px 24px;
+  border-left: 4px solid var(--sky-light);
+  background: #0f2250;
+  color: #c3d0ee;
+  font-size: 0.95rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.note svg {
+  width: 20px;
+  height: 20px;
+  color: var(--sky-light);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   Comparison Section (VS)
+   ========================================================================== */
+.vs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+@media (max-width: 760px) {
+  .vs {
+    grid-template-columns: 1fr;
+  }
+}
+
+.vs ul {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.vs li {
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+}
+
+.no {
+  background: var(--card);
+  border: 1px solid var(--line);
+  opacity: 0.9;
+}
+
+.no li::before {
+  content: "✕";
+  color: #d6455d;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.yes {
+  border: 2px solid var(--blue);
+  background: var(--card);
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.yes-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--blue);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.yes li::before {
+  content: "✓";
+  color: var(--ok);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   Workflow Steps
+   ========================================================================== */
+.steps {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  counter-reset: s;
+  margin-top: 40px;
+}
+
+.step-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--blue);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  counter-increment: s;
+  transition: transform var(--transition-fast);
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.step-card::before {
+  content: "0" counter(s);
+  display: block;
+  font: 800 2rem var(--font-heading);
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+
+.step-card b {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: var(--fg-strong);
+}
+
+.step-card span {
+  color: var(--mut);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  display: block;
+}
+
+/* ==========================================================================
+   Support Plans Section
+   ========================================================================== */
+.plans {
+  margin-top: 40px;
+}
+
+.plans .c {
+  position: relative;
+}
+
+.plans .c.f {
+  border: 2px solid var(--blue);
+  box-shadow: var(--shadow-md);
+  transform: scale(1.02);
+}
+
+@media (max-width: 820px) {
+  .plans .c.f {
+    transform: none;
+  }
+}
+
+.plan-featured-badge {
+  position: absolute;
+  top: -12px;
+  right: 24px;
+  background: var(--blue);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.plan-price {
+  margin: 16px 0 20px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line-light);
+  border-bottom: 1px solid var(--line-light);
+}
+
+.plan-price b {
+  font-size: 2rem;
+  font-family: var(--font-heading);
+  color: var(--fg-strong);
+}
+
+.plan-price span {
+  font-size: 0.85rem;
+  color: var(--mut);
+}
+
+.plans ul {
+  padding: 0;
+  margin: 18px 0 24px;
+  list-style: none;
+  color: var(--mut);
+  font-size: 0.925rem;
+}
+
+.plans li {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.plans li svg {
+  width: 16px;
+  height: 16px;
+  color: var(--ok);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Live Interactive Portfolio / Case Showcase
+   ========================================================================== */
+.portfolio-tabs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin: 28px 0 32px;
+}
+
+.portfolio-tab-btn {
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--fg);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.portfolio-tab-btn.active {
+  background: var(--blue);
+  color: #ffffff;
+  border-color: var(--blue);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.case-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+}
+
+@media (max-width: 820px) {
+  .case-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.case-content {
+  padding: 36px;
+}
+
+.case-preview-frame {
+  background: var(--bg-alt);
+  padding: 24px;
+  border-left: 1px solid var(--line);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 820px) {
+  .case-preview-frame {
+    border-left: none;
+    border-top: 1px solid var(--line);
+  }
+}
+
+.mockup-window {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 440px;
+  overflow: hidden;
+}
+
+.mockup-bar {
+  background: var(--line-light);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mockup-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #cbd5e1;
+}
+
+.mockup-circle:nth-child(1) { background: #f87171; }
+.mockup-circle:nth-child(2) { background: #fbbf24; }
+.mockup-circle:nth-child(3) { background: #34d399; }
+
+.mockup-body {
+  padding: 20px;
+}
+
+.case-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.metric-box {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+}
+
+.metric-box b {
+  font-size: 1.4rem;
+  color: var(--blue);
+  font-family: var(--font-heading);
+  display: block;
+}
+
+.metric-box span {
+  font-size: 0.8rem;
+  color: var(--mut);
+}
+
+/* ==========================================================================
+   FAQ Section (Accordion)
+   ========================================================================== */
+.faq-list {
+  max-width: 860px;
+  margin: 36px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.faq-item:hover {
+  border-color: var(--blue-border);
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--fg-strong);
+  cursor: pointer;
+  background: none;
+}
+
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--blue);
+  transition: transform var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(180deg);
+  background: var(--blue);
+  color: #ffffff;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+  padding: 0 24px;
+  color: var(--mut);
+  font-size: 0.975rem;
+  line-height: 1.6;
+}
+
+.faq-item.open .faq-answer {
+  padding: 0 24px 20px;
+  max-height: 500px;
+}
+
+/* ==========================================================================
+   Contact & Lead Capture Form
+   ========================================================================== */
+.contact-section {
+  background: var(--navy);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section h2, .contact-section h3 {
+  color: #ffffff;
+}
+
+.contact-section .sub {
+  color: #b8c6e8;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 48px;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-info-card {
+  background: #0f2250;
+  border: 1px solid #2b4488;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.contact-info-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background: rgba(59, 130, 246, 0.2);
+  color: var(--sky-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-info-text b {
+  display: block;
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.contact-info-text span, .contact-info-text a {
+  color: #c3d0ee;
+  font-size: 0.925rem;
+}
+
+.contact-form-card {
+  background: var(--navy-dark);
+  border: 1px solid #2b4488;
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #eaf0ff;
+  margin-bottom: 8px;
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 13px 16px;
+  background: #0e1e47;
+  border: 1px solid #223c78;
+  border-radius: var(--radius-sm);
+  color: #ffffff;
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--sky-light);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+.form-input::placeholder, .form-textarea::placeholder {
+  color: #6d82af;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-help {
+  font-size: 0.775rem;
+  color: #8c9ec4;
+  margin-top: 6px;
+}
+
+/* ==========================================================================
+   CTA Banner
+   ========================================================================== */
+.cta {
+  background: linear-gradient(160deg, #0b1b3f, #14307a);
+  color: #ffffff;
+  text-align: center;
+  padding: 84px 0;
+}
+
+.cta h2 {
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.cta p {
+  color: #c3d0ee;
+  margin: 16px auto 28px;
+  max-width: 36em;
+  font-size: 1.15rem;
+}
+
+.cta .row {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 48px;
+  color: #b8c6e8;
+  font-size: 0.925rem;
+  text-align: left;
+}
+
+.cta .row-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+  min-width: 220px;
+}
+
+.cta .row b {
+  display: block;
+  color: #ffffff;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+  background: #050d24;
+  color: #93a6d3;
+  padding: 48px 0 32px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 760px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+.footer-col h4 {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #93a6d3;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 24px;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   Floating WhatsApp Button & Chat Box
+   ========================================================================== */
+.wa-floating-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--wa-green);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  z-index: 1500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.wa-floating-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.55);
+}
+
+.wa-floating-btn svg {
+  width: 32px;
+  height: 32px;
+  fill: #ffffff;
+}
+
+.wa-floating-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--wa-green);
+  animation: wa-pulse 2s infinite ease-out;
+  pointer-events: none;
+}
+
+@keyframes wa-pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+/* WhatsApp Mini Popover */
+.wa-popover {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  width: 320px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  z-index: 1500;
+  overflow: hidden;
+  transform: translateY(20px) scale(0.95);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+}
+
+.wa-popover.active {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.wa-popover-header {
+  background: var(--navy);
+  color: #ffffff;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wa-popover-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wa-popover-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.wa-popover-status {
+  font-size: 0.75rem;
+  color: #3ddc97;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.wa-popover-status::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #3ddc97;
+  border-radius: 50%;
+}
+
+.wa-popover-close {
+  color: #93a6d3;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.wa-popover-body {
+  padding: 18px;
+  background: var(--bg);
+}
+
+.wa-bubble {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px 12px 12px 2px;
+  padding: 12px 14px;
+  font-size: 0.9rem;
+  color: var(--fg);
+  line-height: 1.45;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.wa-quick-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wa-quick-btn {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.825rem;
+  color: var(--fg);
+  text-align: left;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.wa-quick-btn:hover {
+  background: var(--blue-subtle);
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+/* Toast Notifications */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 2500;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.toast {
+  background: var(--navy-dark);
+  color: #ffffff;
+  border: 1px solid #2b4488;
+  border-radius: var(--radius-md);
+  padding: 14px 20px;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.25s ease;
+  pointer-events: all;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast.success {
+  border-left: 4px solid var(--ok);
+}
+
+.toast.error {
+  border-left: 4px solid var(--danger);
+}
+
+/* Back to Top button */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 96px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--fg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  z-index: 1400;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background: var(--blue);
+  color: #ffffff;
+  border-color: var(--blue);
+}
+
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
+}
+
+</style>
+</head>
+<body>
+
+  <!-- Top Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Header / Navigation Bar -->
+  <nav>
+    <div class="w">
+      <a class="logo" href="#" aria-label="STS Scalari Tech System Página Inicial">
+        <i class="logo-icon"></i>
+        <span>STS</span>
+        <span class="logo-sub">Scalari Tech System</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#solucoes">Soluções</a>
+        <a href="#simulador">Simulador</a>
+        <a href="#seguranca">Segurança</a>
+        <a href="#cases">Projetos</a>
+        <a href="#processo">Como funciona</a>
+        <a href="#planos">Suporte</a>
+        <a href="#faq">Dúvidas</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Theme Switcher Button -->
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar tema claro e escuro" title="Alternar tema">
+          <!-- Sun Icon -->
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon -->
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a class="btn btn-sm" href="#contato">Pedir orçamento</a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button id="mobile-toggle" class="mobile-toggle" type="button" aria-label="Menu de navegação" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="mobile-drawer" role="navigation" aria-label="Menu móvel">
+    <a href="#solucoes">Soluções</a>
+    <a href="#simulador">Simulador de Orçamento</a>
+    <a href="#seguranca">Cibersegurança</a>
+    <a href="#cases">Projetos & Demonstrações</a>
+    <a href="#processo">Como funciona</a>
+    <a href="#planos">Planos de Suporte</a>
+    <a href="#faq">Perguntas Frequentes</a>
+    <a href="#contato" class="btn" style="margin-top:10px;">Falar com um especialista</a>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero" id="inicio">
+    <div class="w hero-grid">
+      <div>
+        <div class="hero-pill">
+          <span class="dot"></span>
+          <span>Segurança por Design & Código de Alta Performance</span>
+        </div>
+        <h1>
+          Tecnologia feita para pessoas.
+          <span>Segura desde a primeira linha.</span>
+        </h1>
+        <p class="hero-desc">
+          A STS cria sites, sistemas, cardápios digitais e automações para empresas de todo o Brasil. Você conta o problema, nós entregamos uma solução que funciona, é testada e continua protegida.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-lg" id="wa-hero" href="#contato">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2 22l5.08-1.35C8.52 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.57 0-3.04-.43-4.32-1.18l-.31-.18-3.08.82.83-3-.2-.33C4.16 14.93 3.75 13.5 3.75 12c0-4.55 3.7-8.25 8.25-8.25s8.25 3.7 8.25 8.25-3.7 8.25-8.25 8.25zm4.52-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.08-.39-.12-.56.12-.17.25-.65.8-.8 1-.15.15-.3.17-.55.05-.25-.12-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.28.37-.43.12-.14.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.02 2.6c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/>
+            </svg>
+            Descobrir o valor do meu projeto
+          </a>
+          <a class="btn o btn-lg" href="#seguranca">
+            Ver como protegemos
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat-item">
+            <b>100%</b>
+            <span>Código Seguro</span>
+          </div>
+          <div class="hero-stat-item">
+            <b>95+</b>
+            <span>PageSpeed Score</span>
+          </div>
+          <div class="hero-stat-item">
+            <b>Zero</b>
+            <span>Jargão Técnico</span>
+          </div>
+          <div class="hero-stat-item">
+            <b>Brasil</b>
+            <span>Atendimento Nacional</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shield Card (Original Preset Enhanced) -->
+      <aside class="shield">
+        <div class="shield-header">
+          <div class="shield-header-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>O que você leva em todo projeto</h3>
+        </div>
+        <ul>
+          <li><span class="check-icon">✓</span> Orçamento claro, sem compromisso e com prazo garantido</li>
+          <li><span class="check-icon">✓</span> Segurança pensada desde a primeira linha de arquitetura</li>
+          <li><span class="check-icon">✓</span> Testes automatizados e validação rigorosa antes da entrega</li>
+          <li><span class="check-icon">✓</span> Atendimento próximo e humano, falando a sua língua</li>
+          <li><span class="check-icon">✓</span> Suporte contínuo e atualizações depois do projeto no ar</li>
+        </ul>
+        <small>Nenhum sistema no mundo é 100% imune a riscos. O papel da STS é reduzi-los ao máximo com método, boas práticas de engenharia e cuidado com a sua empresa.</small>
+      </aside>
+    </div>
+  </header>
+
+  <!-- Quick WhatsApp Contact Selector (Preset Enhancements) -->
+  <section class="pick" id="contato-rapido">
+    <div class="w">
+      <div class="pick-wrapper">
+        <div class="k">Comece em 30 segundos</div>
+        <h2>O que você quer resolver hoje?</h2>
+        <p class="sub">Escolha uma ou mais opções. Conforme você clica, montamos a mensagem do seu WhatsApp automaticamente para agilizar seu atendimento.</p>
+        
+        <div class="chip-controls">
+          <button type="button" id="chips-select-all">Selecionar todos</button>
+          <span>·</span>
+          <button type="button" id="chips-clear-all">Limpar seleção</button>
+        </div>
+
+        <div class="chips" id="chips" role="group" aria-label="Selecione as soluções desejadas"></div>
+
+        <div class="wa-preview-box">
+          <b>Mensagem prévia:</b>
+          <span class="wa-preview-text" id="wa-preview-text">"Olá, STS! Vim pelo site e gostaria de um orçamento..."</span>
+        </div>
+
+        <a class="btn btn-lg wa-btn" id="wa" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2 22l5.08-1.35C8.52 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.57 0-3.04-.43-4.32-1.18l-.31-.18-3.08.82.83-3-.2-.33C4.16 14.93 3.75 13.5 3.75 12c0-4.55 3.7-8.25 8.25-8.25s8.25 3.7 8.25 8.25-3.7 8.25-8.25 8.25zm4.52-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.08-.39-.12-.56.12-.17.25-.65.8-.8 1-.15.15-.3.17-.55.05-.25-.12-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.28.37-.43.12-.14.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.02 2.6c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/>
+          </svg>
+          Pedir orçamento pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Section with Interactive Specification Modals -->
+  <section id="solucoes">
+    <div class="w">
+      <div class="k">Soluções prontas</div>
+      <h2>Escopo e valor definidos, para você começar rápido.</h2>
+      <p class="sub">Cada solução tem investimento pensado para o tamanho do seu negócio. Clique em qualquer card para ver entregáveis, prazos e detalhes técnicos.</p>
+      
+      <div class="grid">
+        <!-- 1. Cardápio digital -->
+        <div class="c solution-card" data-solution="cardapio">
+          <div class="solution-card-header">
+            <div class="solution-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                <line x1="12" y1="18" x2="12.01" y2="18"/>
+              </svg>
+            </div>
+            <span class="badge">Disponível</span>
+          </div>
+          <h3>Cardápio digital</h3>
+          <p>Seu cardápio no celular do cliente via QR Code, atualizado quando você quiser em segundos.</p>
+          <span class="tag">Menos papel, mais vendas</span>
+          <div class="solution-action">
+            <span>Ver detalhes & entregáveis</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+
+        <!-- 2. Cardápio WhatsApp -->
+        <div class="c solution-card" data-solution="cardapio-wa">
+          <div class="solution-card-header">
+            <div class="solution-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="9" cy="21" r="1"/>
+                <circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+              </svg>
+            </div>
+            <span class="badge badge-ok">Mais pedido</span>
+          </div>
+          <h3>Pedidos no WhatsApp</h3>
+          <p>Os pedidos chegam organizados com carrinho, endereço e cálculo de entrega sem intermediários.</p>
+          <span class="tag">Atendimento mais ágil</span>
+          <div class="solution-action">
+            <span>Ver detalhes & entregáveis</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+
+        <!-- 3. Landing page -->
+        <div class="c solution-card" data-solution="landing-page">
+          <div class="solution-card-header">
+            <div class="solution-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+            </div>
+            <span class="badge">Alta Conversão</span>
+          </div>
+          <h3>Landing page</h3>
+          <p>Uma página objetiva e veloz para apresentar sua oferta, captar leads e vender seu serviço.</p>
+          <span class="tag">Feita para converter</span>
+          <div class="solution-action">
+            <span>Ver detalhes & entregáveis</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+
+        <!-- 4. Site institucional -->
+        <div class="c solution-card" data-solution="site-institucional">
+          <div class="solution-card-header">
+            <div class="solution-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <span class="badge">Corporativo</span>
+          </div>
+          <h3>Site institucional</h3>
+          <p>Sua empresa com presença profissional, páginas corporativas estruturadas e autoridade no Google.</p>
+          <span class="tag">Mais credibilidade</span>
+          <div class="solution-action">
+            <span>Ver detalhes & entregáveis</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+
+        <!-- 5. Catálogo online -->
+        <div class="c solution-card" data-solution="catalogo">
+          <div class="solution-card-header">
+            <div class="solution-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <span class="badge">Vitrine</span>
+          </div>
+          <h3>Catálogo online</h3>
+          <p>Seus produtos sempre à vista com fotos, especificações e botão de orçamento por item.</p>
+          <span class="tag">Vitrine sempre aberta</span>
+          <div class="solution-action">
+            <span>Ver detalhes & entregáveis</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+
+        <!-- 6. Loja virtual -->
+        <div class="c solution-card" data-solution="loja-virtual">
+          <div class="solution-card-header">
+            <div class="solution-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 0 1-8 0"/>
+              </svg>
+            </div>
+            <span class="badge">E-commerce</span>
+          </div>
+          <h3>Loja virtual</h3>
+          <p>Venda online de forma estruturada com gateway PIX, cartões e cálculo de frete seguro.</p>
+          <span class="tag">Novo canal de receita</span>
+          <div class="solution-action">
+            <span>Ver detalhes & entregáveis</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+
+        <!-- 7. Blog profissional -->
+        <div class="c solution-card" data-solution="blog">
+          <div class="solution-card-header">
+            <div class="solution-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20h9"/>
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+              </svg>
+            </div>
+            <span class="badge">SEO & Conteúdo</span>
+          </div>
+          <h3>Blog profissional</h3>
+          <p>Conteúdo relevante que atrai visitantes qualificados do Google e fortalece sua autoridade.</p>
+          <span class="tag">Autoridade e visitas</span>
+          <div class="solution-action">
+            <span>Ver detalhes & entregáveis</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+
+        <!-- 8. Automação de atendimento -->
+        <div class="c solution-card" data-solution="automacao">
+          <div class="solution-card-header">
+            <div class="solution-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <span class="badge badge-ok">Inteligência</span>
+          </div>
+          <h3>Automação WhatsApp</h3>
+          <p>Agentes inteligentes e integrações com WhatsApp: respostas instantâneas 24h e equipe livre.</p>
+          <span class="tag">Mais tempo para vender</span>
+          <div class="solution-action">
+            <span>Ver detalhes & entregáveis</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Solution Modal Backdrop -->
+  <div id="solution-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container">
+      <button id="modal-close" class="modal-close" type="button" aria-label="Fechar janela de detalhes">&times;</button>
+      <span id="modal-badge" class="badge modal-badge">Categoria</span>
+      <h3 id="modal-title" class="modal-title">Título da Solução</h3>
+      <p id="modal-desc" class="modal-desc">Descrição completa do serviço.</p>
+      
+      <h4 style="font-size:1.05rem; margin-bottom:12px;">O que está incluso nesta entrega:</h4>
+      <ul id="modal-features" class="modal-features-list"></ul>
+
+      <div class="modal-footer">
+        <span id="modal-timeframe" style="font-weight:600; color:var(--mut); font-size:0.9rem;">Prazo médio: 5 dias úteis</span>
+        <a id="modal-cta" class="btn wa-btn" href="#" target="_blank" rel="noopener">Quero esta solução</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Project Budget & Timeline Calculator (NEW EXCLUSIVE FEATURE) -->
+  <section class="sec-alt" id="simulador">
+    <div class="w">
+      <div class="k">Calculadora de Investimento</div>
+      <h2>Simulador de Projeto em Tempo Real</h2>
+      <p class="sub">Monte o escopo da sua ideia, selecione recursos adicionais e veja uma estimativa inicial transparente de investimento e prazo.</p>
+
+      <div class="calc-card">
+        <div class="calc-grid">
+          <!-- Step by step inputs -->
+          <div>
+            <!-- Step 1 -->
+            <div class="calc-step">
+              <div class="calc-step-title">
+                <span class="step-num">1</span>
+                <span>Qual o tipo de solução que você precisa?</span>
+              </div>
+              <div class="calc-options-grid">
+                <div class="calc-opt selected" data-calc-project="landing">
+                  <b>Landing Page</b>
+                  <small>Foco em conversão</small>
+                </div>
+                <div class="calc-opt" data-calc-project="cardapio">
+                  <b>Cardápio Digital</b>
+                  <small>QR Code / Delivery</small>
+                </div>
+                <div class="calc-opt" data-calc-project="institucional">
+                  <b>Site Institucional</b>
+                  <small>Múltiplas páginas</small>
+                </div>
+                <div class="calc-opt" data-calc-project="loja">
+                  <b>Loja Virtual</b>
+                  <small>E-commerce completo</small>
+                </div>
+                <div class="calc-opt" data-calc-project="automacao">
+                  <b>Automação WhatsApp</b>
+                  <small>Chatbots & IA</small>
+                </div>
+                <div class="calc-opt" data-calc-project="custom">
+                  <b>Sistema Sob Medida</b>
+                  <small>SaaS / Plataforma</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="calc-step">
+              <div class="calc-step-title">
+                <span class="step-num">2</span>
+                <span>Recursos adicionais recomendados</span>
+              </div>
+              <div class="calc-checkboxes">
+                <label class="calc-check">
+                  <input type="checkbox" class="calc-addon-check" value="cms">
+                  <span>Painel de Edição (CMS)</span>
+                </label>
+                <label class="calc-check">
+                  <input type="checkbox" class="calc-addon-check" value="payment">
+                  <span>Checkout PIX/Cartão</span>
+                </label>
+                <label class="calc-check">
+                  <input type="checkbox" class="calc-addon-check" value="chatbot">
+                  <span>Chatbot WhatsApp com IA</span>
+                </label>
+                <label class="calc-check">
+                  <input type="checkbox" class="calc-addon-check" value="seo">
+                  <span>SEO Técnico para o Google</span>
+                </label>
+                <label class="calc-check">
+                  <input type="checkbox" class="calc-addon-check" value="sec">
+                  <span>Blindagem OWASP & LGPD</span>
+                </label>
+                <label class="calc-check">
+                  <input type="checkbox" class="calc-addon-check" value="domain">
+                  <span>Configuração de Domínio e E-mail</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 3 & 4 Grid -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+              <div class="calc-step">
+                <div class="calc-step-title">
+                  <span class="step-num">3</span>
+                  <span>Prazo desejado</span>
+                </div>
+                <label class="calc-check" style="margin-bottom:8px;">
+                  <input type="radio" name="calc-speed" value="normal" checked>
+                  <span>Prazo Padrão</span>
+                </label>
+                <label class="calc-check">
+                  <input type="radio" name="calc-speed" value="urgent">
+                  <span>Expresso Prioritário (-40% tempo)</span>
+                </label>
+              </div>
+
+              <div class="calc-step">
+                <div class="calc-step-title">
+                  <span class="step-num">4</span>
+                  <span>Plano de suporte mensal</span>
+                </div>
+                <label class="calc-check" style="margin-bottom:8px;">
+                  <input type="radio" name="calc-support" value="none" checked>
+                  <span>Sem plano mensal</span>
+                </label>
+                <label class="calc-check" style="margin-bottom:8px;">
+                  <input type="radio" name="calc-support" value="basico">
+                  <span>Básico (R$ 90/mês)</span>
+                </label>
+                <label class="calc-check">
+                  <input type="radio" name="calc-support" value="inter">
+                  <span>Intermediário (R$ 180/mês)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Summary and output -->
+          <div class="calc-summary">
+            <div>
+              <h3>Resumo da Simulação</h3>
+              <div class="calc-summary-item">
+                <span>Solução base:</span>
+                <span id="calc-sum-type">Landing Page</span>
+              </div>
+              <div class="calc-summary-item">
+                <span>Recursos extras:</span>
+                <span id="calc-sum-addons">Sem extras</span>
+              </div>
+              <div class="calc-summary-item">
+                <span>Ritmo de entrega:</span>
+                <span id="calc-sum-speed">Prazo normal</span>
+              </div>
+              <div class="calc-summary-item">
+                <span>Suporte contínuo:</span>
+                <span id="calc-sum-support">Nenhum plano incluso</span>
+              </div>
+            </div>
+
+            <div class="calc-estimate-box">
+              <div class="calc-estimate-label">Estimativa Inicial STS</div>
+              <div class="calc-estimate-val" id="calc-estimate-val">R$ 690</div>
+              <div class="calc-estimate-time" id="calc-estimate-time">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span>Prazo estimado: ~4 dias úteis</span>
+              </div>
+            </div>
+
+            <div>
+              <a class="btn btn-lg wa-btn" id="calc-send-wa" href="#" target="_blank" rel="noopener" style="width:100%;">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2 22l5.08-1.35C8.52 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.57 0-3.04-.43-4.32-1.18l-.31-.18-3.08.82.83-3-.2-.33C4.16 14.93 3.75 13.5 3.75 12c0-4.55 3.7-8.25 8.25-8.25s8.25 3.7 8.25 8.25-3.7 8.25-8.25 8.25zm4.52-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.08-.39-.12-.56.12-.17.25-.65.8-.8 1-.15.15-.3.17-.55.05-.25-.12-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.28.37-.43.12-.14.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.02 2.6c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/>
+                </svg>
+                Solicitar proposta com este escopo
+              </a>
+              <small style="display:block; text-align:center; color:#9fb0d4; margin-top:10px; font-size:0.75rem;">Valores de referência para orientar o projeto. Proposta formal sem custos.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cybersecurity Section with Interactive Auditor Demo -->
+  <section class="sec" id="seguranca">
+    <div class="w">
+      <div class="k">Cibersegurança e confiança</div>
+      <h2>Criar uma página ficou fácil. Criar uma solução segura, não.</h2>
+      <p class="sub">Seus clientes confiam dados e pedidos ao seu negócio. A segurança da sua tecnologia é parte da sua reputação, e na STS ela entra no projeto desde o primeiro dia, não como remendo no final.</p>
+      
+      <div class="grid">
+        <div class="c">
+          <h3>Segurança desde o início</h3>
+          <p>Planejada na arquitetura, antes de escrever a primeira linha, e não corrigida depois do problema.</p>
+        </div>
+        <div class="c">
+          <h3>Dados protegidos</h3>
+          <p>Atenção rigorosa à privacidade, ao controle de acessos e ao tratamento das informações dos clientes (LGPD).</p>
+        </div>
+        <div class="c">
+          <h3>Testado antes de entregar</h3>
+          <p>Validações contínuas para encontrar possíveis falhas antes de você, e jamais depois dos seus clientes.</p>
+        </div>
+        <div class="c">
+          <h3>Código organizado</h3>
+          <p>Boas práticas de engenharia de software que facilitam manutenções futuras com menos brechas e zero retrabalho.</p>
+        </div>
+        <div class="c">
+          <h3>Acompanhamento contínuo</h3>
+          <p>Planos de suporte com monitoramento preventivo, correção de vulnerabilidades e backups frequentes.</p>
+        </div>
+        <div class="c">
+          <h3>Transparência real</h3>
+          <p>Você acompanha o que acontece em cada etapa do projeto, com conversa direta, relatórios claros e sem termos técnicos.</p>
+        </div>
+      </div>
+
+      <!-- Live Interactive Security Audit Simulator -->
+      <div class="audit-demo-card">
+        <div class="audit-header">
+          <div>
+            <h3 style="color:#ffffff; margin-bottom:4px;">Demonstração: Blindagem de Segurança STS</h3>
+            <p style="color:#b8c6e8; font-size:0.9rem; margin:0;">Veja os 6 pilares de proteção que implementamos em cada código entregue:</p>
+          </div>
+          <div class="audit-status">
+            <span class="audit-indicator"></span>
+            <span id="audit-status-text">Status: Camadas ativas e monitoradas</span>
+          </div>
+        </div>
+
+        <div class="audit-list">
+          <div class="audit-item">
+            <div class="audit-item-label">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Proteção Anti-SQLi & XSS</span>
+            </div>
+            <span class="audit-badge">100% Protegido ✓</span>
+          </div>
+          <div class="audit-item">
+            <div class="audit-item-label">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span>Criptografia SSL/TLS & HSTS</span>
+            </div>
+            <span class="audit-badge">100% Protegido ✓</span>
+          </div>
+          <div class="audit-item">
+            <div class="audit-item-label">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span>Sanitização Rigorosa de Inputs</span>
+            </div>
+            <span class="audit-badge">100% Protegido ✓</span>
+          </div>
+          <div class="audit-item">
+            <div class="audit-item-label">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/></svg>
+              <span>Rate Limiting & Anti-DDoS</span>
+            </div>
+            <span class="audit-badge">100% Protegido ✓</span>
+          </div>
+          <div class="audit-item">
+            <div class="audit-item-label">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              <span>Conformidade com LGPD</span>
+            </div>
+            <span class="audit-badge">100% Protegido ✓</span>
+          </div>
+          <div class="audit-item">
+            <div class="audit-item-label">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <span>Monitoramento & Logs Seguros</span>
+            </div>
+            <span class="audit-badge">100% Protegido ✓</span>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:flex-end;">
+          <button id="run-audit-btn" class="btn btn-sm wht" type="button">
+            Testar Diagnóstico Visual
+          </button>
+        </div>
+      </div>
+
+      <div class="note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+        </svg>
+        <span>Somos honestos: nenhum sistema é totalmente imune a riscos. O que fazemos é reduzi-los com método, responsabilidade técnica e cuidado com cada cliente.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Portfolio & Case Mockup Showcase (NEW EXCLUSIVE FEATURE) -->
+  <section id="cases">
+    <div class="w">
+      <div class="k">Projetos & Entregas</div>
+      <h2>Resultados que geram receita e confiança.</h2>
+      <p class="sub">Veja na prática como entregamos soluções completas para diferentes modelos de negócios.</p>
+
+      <div class="portfolio-tabs">
+        <button class="portfolio-tab-btn active" data-case="food">Gastronomia / Cardápio WhatsApp</button>
+        <button class="portfolio-tab-btn" data-case="b2b">Advocacia / Landing Page B2B</button>
+        <button class="portfolio-tab-btn" data-case="saas">Tecnologia / Automação com IA</button>
+      </div>
+
+      <div class="case-card">
+        <div class="case-content">
+          <span id="case-category" class="badge">Cardápio Digital & Pedidos no WhatsApp</span>
+          <h3 id="case-title" style="font-size:1.6rem; margin:12px 0;">Don Corleone Pizzaria Artesanal</h3>
+          <p id="case-desc" style="color:var(--mut); line-height:1.6;">Eliminação de 100% dos custos com impressão física e economia de 18% em taxas de aplicativos de delivery com envio direto ao WhatsApp da cozinha.</p>
+          
+          <div class="case-metrics-grid">
+            <div class="metric-box">
+              <b id="case-m1-val">99/100</b>
+              <span id="case-m1-lbl">PageSpeed Mobile</span>
+            </div>
+            <div class="metric-box">
+              <b id="case-m2-val">+42%</b>
+              <span id="case-m2-lbl">Aumento em vendas diretas</span>
+            </div>
+          </div>
+
+          <a class="btn wa-btn" href="#contato">Quero um projeto com esse padrão</a>
+        </div>
+
+        <div class="case-preview-frame">
+          <div class="mockup-window">
+            <div class="mockup-bar">
+              <div class="mockup-circle"></div>
+              <div class="mockup-circle"></div>
+              <div class="mockup-circle"></div>
+              <span style="font-size:0.75rem; color:var(--mut); margin-left:8px;">sts.preview.app</span>
+            </div>
+            <div class="mockup-body" id="case-preview-body"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section (VS) -->
+  <section class="sec-alt">
+    <div class="w">
+      <div class="k">Nosso diferencial</div>
+      <h2>Qualquer um cria uma página. Poucos constroem uma solução.</h2>
+      <p class="sub">Ferramentas prontas ajudam todo mundo a começar. O que nos diferencia é saber usá-las com conhecimento de engenharia de software e responsabilidade.</p>
+      
+      <div class="vs">
+        <div class="c no">
+          <h3>Uma página qualquer</h3>
+          <ul>
+            <li>Funciona no primeiro dia, quebra na primeira atualização</li>
+            <li>Segurança fica para depois (ou é ignorada)</li>
+            <li>Ninguém testou de verdade antes de entregar</li>
+            <li>Entregue e esquecida pelo freelancer</li>
+            <li>Sem suporte técnico ou proteção de dados</li>
+          </ul>
+        </div>
+        <div class="c yes">
+          <span class="yes-badge">Padrão STS</span>
+          <h3>Uma solução STS</h3>
+          <ul>
+            <li>Funciona perfeitamente e continua funcionando</li>
+            <li>Segurança pensada desde o início da arquitetura</li>
+            <li>Testada e validada em múltiplos dispositivos</li>
+            <li>Atendimento humano e suporte do começo ao fim</li>
+            <li>Total conformidade com boas práticas e LGPD</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why STS (6 Pillars) -->
+  <section style="padding-top:0">
+    <div class="w">
+      <div class="k">Por que a STS</div>
+      <h2>Seis motivos para começar seu projeto com a gente.</h2>
+      <div class="grid" style="margin-top:36px">
+        <div class="c">
+          <h3>Visão técnica</h3>
+          <p>Somos programadores reais. Arquitetura robusta pensada para durar e escalar sem retrabalho.</p>
+        </div>
+        <div class="c">
+          <h3>Segurança de verdade</h3>
+          <p>Proteção de dados e boas práticas presentes desde a primeira linha de código.</p>
+        </div>
+        <div class="c">
+          <h3>Feito sob medida</h3>
+          <p>Parte da necessidade real da sua empresa, e não de um modelo genérico copiado da internet.</p>
+        </div>
+        <div class="c">
+          <h3>Atendimento próximo</h3>
+          <p>Conversa humana, sem jargão técnico. Ouvimos e entendemos antes de programar.</p>
+        </div>
+        <div class="c">
+          <h3>Clareza no projeto</h3>
+          <p>Você sabe exatamente o que acontece em cada etapa, sem surpresas de custos ou prazos.</p>
+        </div>
+        <div class="c">
+          <h3>Tecnologia acessível</h3>
+          <p>Investimento justo, viável para pequenos negócios e escalável para grandes empresas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Steps -->
+  <section id="processo" style="padding-top:0">
+    <div class="w">
+      <div class="k">Como trabalhamos</div>
+      <h2>Um processo simples, do primeiro papo à entrega.</h2>
+      <div class="steps">
+        <div class="step-card">
+          <b>Entendemos</b>
+          <span>Ouvimos sua ideia, analisamos suas dores e mapeamos a melhor solução técnica.</span>
+        </div>
+        <div class="step-card">
+          <b>Planejamos</b>
+          <span>Definimos o escopo detalhado, prazo de entrega e orçamento claro sem letras miúdas.</span>
+        </div>
+        <div class="step-card">
+          <b>Desenvolvemos</b>
+          <span>Construímos sua solução com técnica refinada, segurança ativa e design moderno.</span>
+        </div>
+        <div class="step-card">
+          <b>Testamos</b>
+          <span>Validamos responsividade, segurança e velocidade antes de liberar o acesso.</span>
+        </div>
+        <div class="step-card">
+          <b>Entregamos</b>
+          <span>Colocamos no ar, treinamos sua equipe e continuamos cuidando da evolução do projeto.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Scale -->
+  <section style="padding-top:0">
+    <div class="w">
+      <div class="k">Do simples ao complexo</div>
+      <h2>Pequeno ou grande, todo projeto começa igual: com uma conversa.</h2>
+      <div class="grid" style="margin-top:32px">
+        <div class="c">
+          <h3>Soluções prontas</h3>
+          <p>Para quem precisa de agilidade: cardápios digitais, sites institucionais, landing pages e lojas com escopo e prazos definidos.</p>
+        </div>
+        <div class="c">
+          <h3>Projetos sob medida</h3>
+          <p>Para quem tem uma ideia exclusiva: sistemas internos, plataformas SaaS, integrações de APIs e agentes inteligentes sob demanda.</p>
+        </div>
+        <div class="c">
+          <h3>Produtos próprios</h3>
+          <p>Plataformas digitais e ferramentas proprietárias de produtividade desenvolvidas pela STS para diversos setores da economia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support Plans (Planos de Manutenção) -->
+  <section class="sec-alt" id="planos">
+    <div class="w">
+      <div class="k">Depois da entrega</div>
+      <h2>Seu projeto continua sempre bem cuidado.</h2>
+      <p class="sub">Não abandonamos você após a entrega. Nossos planos de suporte garantem que sua tecnologia continue segura, rápida e em constante evolução.</p>
+
+      <div class="grid plans">
+        <!-- Básico -->
+        <div class="c">
+          <h3>Básico</h3>
+          <p>O essencial para manter tudo funcionando sem dores de cabeça.</p>
+          <div class="plan-price">
+            <b>R$ 90</b>
+            <span>/mês</span>
+          </div>
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Correção de falhas e bugs</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Atualizações essenciais de segurança</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Backups periódicos na nuvem</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Suporte em horário comercial</span>
+            </li>
+          </ul>
+          <button class="btn o" data-plan-btn="Básico" type="button" style="margin-top:auto;">Escolher Básico</button>
+        </div>
+
+        <!-- Intermediário (Destaque) -->
+        <div class="c f">
+          <span class="plan-featured-badge">Mais Escolhido</span>
+          <h3>Intermediário</h3>
+          <p>Para empresas que precisam de pequenos ajustes mensais e acompanhamento próximo.</p>
+          <div class="plan-price">
+            <b>R$ 180</b>
+            <span>/mês</span>
+          </div>
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Tudo incluso no plano Básico</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Alterações mensais de textos, banners e preços</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Monitoramento ativo de estabilidade</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Suporte prioritário via WhatsApp</span>
+            </li>
+          </ul>
+          <button class="btn" data-plan-btn="Intermediário" type="button" style="margin-top:auto;">Escolher Intermediário</button>
+        </div>
+
+        <!-- Premium -->
+        <div class="c">
+          <h3>Premium</h3>
+          <p>Acompanhamento completo, suporte ágil e evolução constante da sua ferramenta.</p>
+          <div class="plan-price">
+            <b>R$ 350</b>
+            <span>/mês</span>
+          </div>
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Tudo do plano Intermediário</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Desenvolvimento de novas funcionalidades</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Otimização contínua de velocidade e SEO</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Atendimento emergencial em até 2 horas</span>
+            </li>
+          </ul>
+          <button class="btn o" data-plan-btn="Premium" type="button" style="margin-top:auto;">Escolher Premium</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive FAQ Section (NEW EXCLUSIVE FEATURE) -->
+  <section id="faq">
+    <div class="w">
+      <div class="k">Perguntas Frequentes</div>
+      <h2 style="text-align:center; margin:0 auto;">Tudo o que você precisa saber antes de começar.</h2>
+      <p class="sub" style="text-align:center; margin:14px auto 36px;">Transparência total desde o início. Se tiver outra dúvida, basta nos chamar no WhatsApp.</p>
+
+      <div class="faq-list">
+        <!-- Q1 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Quanto tempo leva para meu projeto ficar pronto?</span>
+            <span class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Projetos como Landing Pages e Cardápios Digitais costumam ser entregues em média de 3 a 5 dias úteis. Sites institucionais levam entre 7 e 12 dias úteis, e e-commerces ou sistemas sob medida variam conforme a complexidade. Todos os prazos são formalizados em contrato antes do início.
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>O site/sistema será 100% meu ou fico preso a mensalidades?</span>
+            <span class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            O projeto é 100% de propriedade da sua empresa! Nós entregamos os códigos, acessos de hospedagem e domínio. Você não é obrigado a assinar planos mensais; eles são oferecidos como uma comodidade caso queira que a STS cuide de atualizações e suporte contínuo.
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Como a STS garante a segurança do meu sistema?</span>
+            <span class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Adotamos a metodologia "Security by Design". Isso significa que não usamos plugins piratas, escrevemos código limpo com sanitização contra ataques de injeção (SQLi/XSS), configuramos certificados de criptografia SSL/TLS, aplicamos políticas de cabeçalhos seguros (HSTS) e validamos os requisitos da LGPD.
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Como funciona a forma de pagamento?</span>
+            <span class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Facilitamos via PIX com desconto à vista ou parcelado no cartão de crédito em até 12x. Para a maioria dos projetos, trabalhamos com entrada de 50% no início e 50% na aprovação e entrega final.
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Eu mesmo consigo alterar textos e preços depois?</span>
+            <span class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Sim! No caso de cardápios, lojas e blogs, fornecemos um painel administrativo intuitivo e gravamos um vídeo tutorial personalizado demonstrando como cadastrar pratos, produtos ou editar informações em minutos.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Functional Contact & Proposal Section (NEW EXCLUSIVE FEATURE) -->
+  <section class="contact-section" id="contato">
+    <div class="w">
+      <div class="k">Entre em contato</div>
+      <h2>Tem uma ideia? Vamos transformá-la em solução.</h2>
+      <p class="sub">Orçamento claro, transparente e sem compromisso. Preencha os campos abaixo e decida se quer enviar direto pelo WhatsApp ou receber a proposta detalhada por e-mail.</p>
+
+      <div class="contact-grid">
+        <!-- Direct contact details -->
+        <div class="contact-info-card">
+          <h3 style="margin-bottom:20px;">Informações de Atendimento</h3>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div class="contact-info-text">
+              <b>WhatsApp Direto</b>
+              <a href="https://wa.me/5519983326884" target="_blank" rel="noopener">(19) 99833-2688</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="contact-info-text">
+              <b>Localização</b>
+              <span>Amparo, São Paulo · Atendimento em todo o Brasil</span>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div class="contact-info-text">
+              <b>Horário de Atendimento</b>
+              <span>Segunda a Sexta das 08h às 18h</span>
+            </div>
+          </div>
+
+          <div style="margin-top:32px; padding-top:20px; border-top:1px solid #223c78;">
+            <p style="font-size:0.875rem; color:#93a6d3;">Garantimos sigilo e segurança integral das informações da sua ideia ou empresa.</p>
+          </div>
+        </div>
+
+        <!-- Validated Lead Form -->
+        <div class="contact-form-card">
+          <h3 style="margin-bottom:8px;">Formulário de Proposta Formal</h3>
+          <p style="color:#b8c6e8; font-size:0.9rem; margin-bottom:24px;">Preencha com seus dados para gerarmos seu orçamento sem compromisso.</p>
+
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="form-name">Seu Nome *</label>
+                <input class="form-input" type="text" id="form-name" placeholder="Ex: Roberto Silva" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-phone">WhatsApp com DDD *</label>
+                <input class="form-input" type="tel" id="form-phone" placeholder="(19) 99999-9999" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="form-email">Seu Melhor E-mail</label>
+                <input class="form-input" type="email" id="form-email" placeholder="seuemail@empresa.com.br">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-service">Solução Principal</label>
+                <select class="form-select" id="form-service">
+                  <option value="Landing Page">Landing Page de Alta Conversão</option>
+                  <option value="Cardápio Digital">Cardápio Digital com QR Code</option>
+                  <option value="Cardápio WhatsApp">Cardápio com Pedidos no WhatsApp</option>
+                  <option value="Site Institucional">Site Institucional</option>
+                  <option value="Catálogo Online">Catálogo Online de Produtos</option>
+                  <option value="Loja Virtual">Loja Virtual Completa</option>
+                  <option value="Automação WhatsApp">Automação de Atendimento & IA</option>
+                  <option value="Projeto Sob Medida">Sistema Web Sob Medida</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-msg">Fale um pouco sobre o projeto ou desafio</label>
+              <textarea class="form-textarea" id="form-msg" rows="3" placeholder="Ex: Preciso de uma página rápida para vender meus serviços de consultoria e receber leads no WhatsApp..."></textarea>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:12px; margin-top:24px;">
+              <button class="btn btn-lg wa-btn" id="btn-submit-wa" type="button">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2 22l5.08-1.35C8.52 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.57 0-3.04-.43-4.32-1.18l-.31-.18-3.08.82.83-3-.2-.33C4.16 14.93 3.75 13.5 3.75 12c0-4.55 3.7-8.25 8.25-8.25s8.25 3.7 8.25 8.25-3.7 8.25-8.25 8.25zm4.52-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.08-.39-.12-.56.12-.17.25-.65.8-.8 1-.15.15-.3.17-.55.05-.25-.12-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.28.37-.43.12-.14.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.02 2.6c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/>
+                </svg>
+                Enviar proposta formatada pelo WhatsApp
+              </button>
+
+              <button class="btn o" id="btn-submit-email" type="button" style="color:#ffffff !important; border-color:#2b4488;">
+                Solicitar Proposta por E-mail
+              </button>
+            </div>
+            <div class="form-help" style="text-align:center;">Seus dados são protegidos e jamais compartilhados com terceiros.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Banner (Preset Preservation) -->
+  <section class="cta">
+    <div class="w">
+      <h2>Transforme sua ideia em tecnologia de verdade.</h2>
+      <p>Orçamento claro e sem compromisso, direto pelo WhatsApp da STS. Você conta a ideia, nós voltamos com uma proposta transparente.</p>
+      <a class="btn btn-lg wht" id="wa2" href="#" target="_blank" rel="noopener">
+        Descobrir o valor do meu projeto agora
+      </a>
+      <div class="row">
+        <div class="row-item">
+          <b>1. Conversa</b>
+          Você conta a ideia ou o problema do seu negócio.
+        </div>
+        <div class="row-item">
+          <b>2. Proposta</b>
+          Orçamento claro e detalhado, sem custos ou letras miúdas.
+        </div>
+        <div class="row-item">
+          <b>3. Entrega Segura</b>
+          Desenvolvido com técnica, validações e suporte pós-entrega.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="w">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a class="logo" href="#" style="margin-bottom:14px;">
+            <i class="logo-icon"></i>
+            <span>STS · Scalari Tech System</span>
+          </a>
+          <p style="color:#93a6d3; font-size:0.9rem; max-width:28em; line-height:1.6;">
+            Tecnologia feita para pessoas. Inovação desenvolvida para transformar e proteger os negócios de todo o Brasil.
+          </p>
+          <div style="font-size:0.85rem; color:#7084ad; margin-top:12px;">
+            Sede: Amparo, São Paulo · Atendimento Nacional
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Soluções</h4>
+          <ul class="footer-links">
+            <li><a href="#solucoes">Cardápio Digital & QR Code</a></li>
+            <li><a href="#solucoes">Landing Pages de Conversão</a></li>
+            <li><a href="#solucoes">Sites Institucionais</a></li>
+            <li><a href="#solucoes">Lojas Virtuais & E-commerce</a></li>
+            <li><a href="#solucoes">Automações WhatsApp & IA</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#simulador">Simulador de Custos</a></li>
+            <li><a href="#seguranca">Cibersegurança</a></li>
+            <li><a href="#planos">Planos de Suporte</a></li>
+            <li><a href="#faq">Dúvidas Frequentes</a></li>
+            <li><a href="#contato">Fale com a STS</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <script>document.write(new Date().getFullYear())</script> STS · Scalari Tech System. Todos os direitos reservados.</span>
+        <span>Amparo - SP · WhatsApp: (19) 99833-2688</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button & Interactive Chat Popover -->
+  <div id="wa-floating-btn" class="wa-floating-btn" role="button" aria-label="Abrir atendimento no WhatsApp" title="Falar com a STS">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2 22l5.08-1.35C8.52 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.57 0-3.04-.43-4.32-1.18l-.31-.18-3.08.82.83-3-.2-.33C4.16 14.93 3.75 13.5 3.75 12c0-4.55 3.7-8.25 8.25-8.25s8.25 3.7 8.25 8.25-3.7 8.25-8.25 8.25zm4.52-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.08-.39-.12-.56.12-.17.25-.65.8-.8 1-.15.15-.3.17-.55.05-.25-.12-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.28.37-.43.12-.14.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.02 2.6c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/>
+    </svg>
+  </div>
+
+  <!-- WhatsApp Popover Chat -->
+  <div id="wa-popover" class="wa-popover">
+    <div class="wa-popover-header">
+      <div class="wa-popover-title">
+        <div class="wa-popover-avatar">STS</div>
+        <div>
+          <b style="font-size:0.9rem; color:#fff; display:block;">Atendimento STS</b>
+          <div class="wa-popover-status">Online agora</div>
+        </div>
+      </div>
+      <span id="wa-popover-close" class="wa-popover-close">&times;</span>
+    </div>
+    <div class="wa-popover-body">
+      <div class="wa-bubble">
+        Olá! 👋 Bem-vindo à <b>Scalari Tech System</b>. Como podemos ajudar seu negócio a crescer com tecnologia segura hoje?
+      </div>
+      <div class="wa-quick-options">
+        <button class="wa-quick-btn" data-msg="Olá! Gostaria de um orçamento para Landing Page.">
+          🚀 Quero uma Landing Page rápida
+        </button>
+        <button class="wa-quick-btn" data-msg="Olá! Quero saber mais sobre o Cardápio com pedidos no WhatsApp.">
+          🍕 Cardápio Digital no WhatsApp
+        </button>
+        <button class="wa-quick-btn" data-msg="Olá! Gostaria de conversar sobre um projeto sob medida para minha empresa.">
+          💼 Projeto sob medida / Sistema Web
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Voltar ao topo da página" title="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script>
+/**
+ * STS · Scalari Tech System - Main Application Logic
+ * Comprehensive interactive behaviors:
+ * 1. Dark/Light Theme Switcher & System Sync
+ * 2. Responsive Mobile Drawer & Scroll Spy
+ * 3. Dynamic WhatsApp Chips Selector & Live Preview
+ * 4. Interactive Project Budget & Delivery Calculator
+ * 5. Detailed Solution Modal with Service Specifications
+ * 6. Interactive Cybersecurity Auditor Simulation
+ * 7. Live Interactive Portfolio & Mockup Tabs
+ * 8. FAQ Accordion with smooth transitions
+ * 9. Masked & Validated Lead Capture Form (WhatsApp & Email)
+ * 10. Floating WhatsApp Chat Widget & Toast Notifications
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Config
+  const STS_PHONE = "5519983326884"; // STS official WhatsApp (Amparo - SP)
+
+  /* ==========================================================================
+     1. Toast Notification System
+     ========================================================================== */
+  const toastContainer = document.getElementById('toast-container');
+
+  function showToast(message, type = 'success', duration = 4000) {
+    if (!toastContainer) return;
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    
+    const iconSvg = type === 'success' 
+      ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#12a36b" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>'
+      : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>';
+
+    toast.innerHTML = `${iconSvg}<span>${message}</span>`;
+    toastContainer.appendChild(toast);
+
+    requestAnimationFrame(() => {
+      toast.classList.add('show');
+    });
+
+    setTimeout(() => {
+      toast.classList.remove('show');
+      setTimeout(() => toast.remove(), 300);
+    }, duration);
+  }
+
+  /* ==========================================================================
+     2. Dark / Light Theme Controller
+     ========================================================================== */
+  const themeToggle = document.getElementById('theme-toggle');
+  const root = document.documentElement;
+
+  // Retrieve saved preference or system default
+  const savedTheme = localStorage.getItem('sts-theme');
+  if (savedTheme) {
+    root.setAttribute('data-theme', savedTheme);
+  } else {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = root.getAttribute('data-theme') || 'light';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', newTheme);
+      localStorage.setItem('sts-theme', newTheme);
+      showToast(`Tema alterado para modo ${newTheme === 'dark' ? 'escuro' : 'claro'}.`, 'success', 2000);
+    });
+  }
+
+  /* ==========================================================================
+     3. Scroll Progress & Back to Top & Scroll Spy
+     ========================================================================== */
+  const scrollProgress = document.getElementById('scroll-progress');
+  const backToTop = document.getElementById('back-to-top');
+  const navLinks = document.querySelectorAll('nav .nav-links a:not(.btn)');
+  const sections = document.querySelectorAll('section[id], header[id]');
+
+  window.addEventListener('scroll', () => {
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+
+    if (scrollProgress) {
+      scrollProgress.style.width = scrolled + '%';
+    }
+
+    if (backToTop) {
+      if (winScroll > 400) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    }
+
+    // Scroll spy
+    let current = '';
+    sections.forEach(sec => {
+      const secTop = sec.offsetTop - 120;
+      if (winScroll >= secTop) {
+        current = sec.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (current && link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  }, { passive: true });
+
+  if (backToTop) {
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ==========================================================================
+     4. Mobile Navigation Drawer
+     ========================================================================== */
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const mobileDrawer = document.getElementById('mobile-drawer');
+
+  if (mobileToggle && mobileDrawer) {
+    mobileToggle.addEventListener('click', () => {
+      const isOpen = mobileDrawer.classList.toggle('open');
+      mobileToggle.classList.toggle('active', isOpen);
+      mobileToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close when clicking a drawer link
+    mobileDrawer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileDrawer.classList.remove('open');
+        mobileToggle.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (mobileDrawer.classList.contains('open') &&
+          !mobileDrawer.contains(e.target) &&
+          !mobileToggle.contains(e.target)) {
+        mobileDrawer.classList.remove('open');
+        mobileToggle.classList.remove('active');
+      }
+    });
+  }
+
+  /* ==========================================================================
+     5. Preset Chips Selector (Dynamic WhatsApp Link & Message Generator)
+     ========================================================================== */
+  const chipOptions = [
+    "Cardápio digital",
+    "Pedidos pelo WhatsApp",
+    "Landing page",
+    "Site institucional",
+    "Catálogo online",
+    "Loja virtual",
+    "Blog",
+    "Automação de atendimento",
+    "Projeto sob medida"
+  ];
+
+  let selectedChips = [];
+  const chipsBox = document.getElementById("chips");
+  const waBtn1 = document.getElementById("wa");
+  const waBtnHero = document.getElementById("wa-hero");
+  const waBtnHero2 = document.getElementById("wa-hero2");
+  const waBtnCta = document.getElementById("wa2");
+  const waPreviewText = document.getElementById("wa-preview-text");
+  const selectAllBtn = document.getElementById("chips-select-all");
+  const clearAllBtn = document.getElementById("chips-clear-all");
+
+  function getWhatsAppMessage(items = selectedChips) {
+    let msg = "Olá, STS! Vim pelo site da Scalari Tech System e gostaria de solicitar um orçamento";
+    if (items.length > 0) {
+      msg += " para os seguintes itens:\n- " + items.join("\n- ");
+    } else {
+      msg += " para um projeto de tecnologia.";
+    }
+    return msg;
+  }
+
+  function getWhatsAppUrl(items = selectedChips) {
+    const text = getWhatsAppMessage(items);
+    return `https://wa.me/${STS_PHONE}?text=${encodeURIComponent(text)}`;
+  }
+
+  function updateWhatsAppLinks() {
+    const url = getWhatsAppUrl();
+    const msg = getWhatsAppMessage();
+
+    if (waBtn1) waBtn1.href = url;
+    if (waBtnHero) waBtnHero.href = url;
+    if (waBtnHero2) waBtnHero2.href = url;
+    if (waBtnCta) waBtnCta.href = url;
+
+    if (waPreviewText) {
+      waPreviewText.textContent = `"${msg.replace(/\n/g, ' ')}"`;
+    }
+  }
+
+  if (chipsBox) {
+    chipOptions.forEach(opt => {
+      const btn = document.createElement("button");
+      btn.className = "chip";
+      btn.type = "button";
+      btn.setAttribute("aria-pressed", "false");
+      btn.innerHTML = `<span class="chip-check">✓</span><span>${opt}</span>`;
+
+      btn.addEventListener("click", () => {
+        const index = selectedChips.indexOf(opt);
+        if (index < 0) {
+          selectedChips.push(opt);
+          btn.setAttribute("aria-pressed", "true");
+        } else {
+          selectedChips.splice(index, 1);
+          btn.setAttribute("aria-pressed", "false");
+        }
+        updateWhatsAppLinks();
+      });
+
+      chipsBox.appendChild(btn);
+    });
+
+    if (selectAllBtn) {
+      selectAllBtn.addEventListener('click', () => {
+        selectedChips = [...chipOptions];
+        chipsBox.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', 'true'));
+        updateWhatsAppLinks();
+        showToast("Todos os serviços foram selecionados!");
+      });
+    }
+
+    if (clearAllBtn) {
+      clearAllBtn.addEventListener('click', () => {
+        selectedChips = [];
+        chipsBox.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', 'false'));
+        updateWhatsAppLinks();
+        showToast("Seleção limpa.", "success", 2000);
+      });
+    }
+
+    updateWhatsAppLinks();
+  }
+
+  /* ==========================================================================
+     6. Solutions Modal / Detailed Specifications
+     ========================================================================== */
+  const solutionsData = {
+    'cardapio': {
+      title: 'Cardápio Digital Responsivo',
+      badge: 'Menos papel, mais vendas',
+      desc: 'Ideal para bares, lanchonetes e restaurantes que desejam eliminar custos com impressão, atualizar preços em tempo real e encantar clientes com fotos atraentes e carregamento instantâneo via QR Code.',
+      features: [
+        'Acesso imediato via QR Code nas mesas ou balcão',
+        'Painel simples para alterar preços, fotos e pratos em segundos',
+        'Categorias organizadas (entradas, pratos, bebidas, sobremesas)',
+        'Otimizado para conexões 3G/4G com carregamento abaixo de 1s',
+        'Layout limpo, acessível e compatível com Android e iOS'
+      ],
+      timeframe: 'Prazo médio de entrega: 3 a 5 dias úteis',
+      ctaText: 'Quero um Cardápio Digital'
+    },
+    'cardapio-wa': {
+      title: 'Cardápio com Pedidos no WhatsApp',
+      badge: 'Atendimento ágil & sem taxas de apps',
+      desc: 'O cliente monta o pedido com acompanhamentos, adicionais e observações, escolhe entrega ou retirada, e a comanda chega 100% formatada e calculada diretamente no WhatsApp do seu estabelecimento.',
+      features: [
+        'Carrinho de compras intuitivo com cálculo de taxa de entrega',
+        'Personalização de adicionais, combos e observações',
+        'Comanda formatada enviada ao WhatsApp do atendente/balcão',
+        'Zero cobrança de comissões por pedido vendido (economia total)',
+        'Controle de horário de funcionamento e status da loja'
+      ],
+      timeframe: 'Prazo médio de entrega: 4 a 7 dias úteis',
+      ctaText: 'Quero Cardápio com Pedidos'
+    },
+    'landing-page': {
+      title: 'Landing Page de Alta Conversão',
+      badge: 'Feita para converter visitantes em clientes',
+      desc: 'Página única ultrarrápida, construída estrategicamente com técnicas de copy, design persuasivo e cibersegurança. Ideal para anúncios patrocinados (Meta Ads, Google Ads) e lançamentos de serviços.',
+      features: [
+        'Estrutura focada em conversão (Copywriting estruturado + CTAs claros)',
+        'Pontuação 95+ no Google PageSpeed Insights para pagar menos no clique',
+        'Integração direta com WhatsApp, Pixel do Facebook e Google Tag Manager',
+        'Formulário inteligente com validação e proteção contra spam',
+        'Hospedagem segura com certificado SSL/TLS vitalício'
+      ],
+      timeframe: 'Prazo médio de entrega: 3 a 6 dias úteis',
+      ctaText: 'Quero uma Landing Page'
+    },
+    'site-institucional': {
+      title: 'Site Institucional Profissional',
+      badge: 'Mais credibilidade e autoridade para sua marca',
+      desc: 'Presença digital robusta para clínicas, escritórios, consultorias, indústrias e empresas que precisam transmitir seriedade, apresentar seus diferenciais e conquistar grandes contratos.',
+      features: [
+        'Múltiplas páginas estruturadas (Quem Somos, Serviços, Casos, Contato)',
+        'Otimização completa para aparecer nas buscas orgânicas do Google (SEO)',
+        'Design exclusivo adaptado à identidade visual da sua marca',
+        'Total conformidade com as diretrizes da LGPD (Segurança de Dados)',
+        'Integração com Google Maps, WhatsApp e e-mails corporativos'
+      ],
+      timeframe: 'Prazo médio de entrega: 7 a 15 dias úteis',
+      ctaText: 'Quero um Site Institucional'
+    },
+    'catalogo': {
+      title: 'Catálogo de Produtos Online',
+      badge: 'Vitrine aberta 24 horas por dia',
+      desc: 'Perfeito para distribuidoras, lojas de móveis, atacados e indústrias que querem exibir seus produtos com especificações detalhadas, fotos em alta definição e botão de orçamento por item.',
+      features: [
+        'Busca rápida e filtros inteligentes por categoria ou marca',
+        'Botão "Cotar este item no WhatsApp" em cada produto',
+        'Galeria de imagens leves e ficha técnica detalhada',
+        'Facilidade para exportar catálogo ou compartilhar produtos específicos',
+        'Painel amigável para inclusão e pausa de estoque'
+      ],
+      timeframe: 'Prazo médio de entrega: 5 a 10 dias úteis',
+      ctaText: 'Quero um Catálogo Online'
+    },
+    'loja-virtual': {
+      title: 'Loja Virtual Completa (E-commerce)',
+      badge: 'Novo canal de faturamento seguro',
+      desc: 'Venda produtos físicos ou digitais com segurança de nível bancário, integração com meios de pagamento modernos (PIX automático, Cartão com antifraude) e cálculo de frete automático.',
+      features: [
+        'Checkout transparente e seguro com Mercado Pago, Asaas ou PagBank',
+        'Cálculo automático de frete (Correios, Melhor Envio, Jadlog)',
+        'Gestão de pedidos, estoque e relatórios financeiros',
+        'Proteção ativa contra ataques de injeção e sequestro de sessão',
+        'Design fluido tanto no smartphone quanto no computador'
+      ],
+      timeframe: 'Prazo médio de entrega: 12 a 25 dias úteis',
+      ctaText: 'Quero uma Loja Virtual'
+    },
+    'blog': {
+      title: 'Blog Profissional & Portal de Artigos',
+      badge: 'Autoridade e atração orgânica no Google',
+      desc: 'Canal de publicação de conteúdo para atrair clientes gratuitamente pelos mecanismos de busca, educar seu público-alvo e construir uma base sólida de leitores e potenciais clientes.',
+      features: [
+        'Otimização on-page técnica para ranqueamento no Google (SEO)',
+        'Carregamento ultraveloz para redução da taxa de rejeição',
+        'Compartilhamento fácil em redes sociais e captação de leads/newsletter',
+        'Painel de escrita amigável com suporte a imagens, vídeos e links',
+        'Código limpo e sustentável'
+      ],
+      timeframe: 'Prazo médio de entrega: 5 a 10 dias úteis',
+      ctaText: 'Quero um Blog Profissional'
+    },
+    'automacao': {
+      title: 'Automação de Atendimento & Agentes IA',
+      badge: 'Mais tempo livre e respostas em segundos',
+      desc: 'Soluções inteligentes com WhatsApp Cloud API, triagem automática de clientes, qualificação de leads, agendamento de consultas e integração com planilhas ou sistemas de CRM.',
+      features: [
+        'Respostas automáticas para dúvidas frequentes 24 horas por dia',
+        'Qualificação de clientes antes de passar para o atendente humano',
+        'Disparo de notificações de pedidos, lembretes de agendamento ou cobranças',
+        'Integração com Google Planilhas, Notion, Trello ou banco de dados',
+        'Segurança no tratamento dos dados do cliente (Criptografia de ponta a ponta)'
+      ],
+      timeframe: 'Prazo médio de entrega: 5 a 12 dias úteis',
+      ctaText: 'Quero Automação de Atendimento'
+    }
+  };
+
+  const modalBackdrop = document.getElementById('solution-modal');
+  const modalCloseBtn = document.getElementById('modal-close');
+  const modalTitle = document.getElementById('modal-title');
+  const modalBadge = document.getElementById('modal-badge');
+  const modalDesc = document.getElementById('modal-desc');
+  const modalFeatures = document.getElementById('modal-features');
+  const modalTimeframe = document.getElementById('modal-timeframe');
+  const modalCta = document.getElementById('modal-cta');
+
+  function openSolutionModal(key) {
+    const data = solutionsData[key];
+    if (!data || !modalBackdrop) return;
+
+    modalTitle.textContent = data.title;
+    modalBadge.textContent = data.badge;
+    modalDesc.textContent = data.desc;
+    modalTimeframe.textContent = data.timeframe;
+    modalCta.textContent = data.ctaText;
+
+    // Build features
+    modalFeatures.innerHTML = '';
+    data.features.forEach(feat => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 6L9 17l-5-5"/>
+        </svg>
+        <span>${feat}</span>
+      `;
+      modalFeatures.appendChild(li);
+    });
+
+    // Set CTA action
+    const waText = `Olá, STS! Estive analisando a solução de "${data.title}" no site e gostaria de conversar sobre a implementação dela no meu negócio.`;
+    modalCta.href = `https://wa.me/${STS_PHONE}?text=${encodeURIComponent(waText)}`;
+
+    modalBackdrop.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSolutionModal() {
+    if (!modalBackdrop) return;
+    modalBackdrop.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Hook cards
+  document.querySelectorAll('[data-solution]').forEach(card => {
+    card.addEventListener('click', () => {
+      const key = card.getAttribute('data-solution');
+      openSolutionModal(key);
+    });
+  });
+
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', closeSolutionModal);
+  }
+
+  if (modalBackdrop) {
+    modalBackdrop.addEventListener('click', (e) => {
+      if (e.target === modalBackdrop) {
+        closeSolutionModal();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalBackdrop && modalBackdrop.classList.contains('active')) {
+      closeSolutionModal();
+    }
+  });
+
+  /* ==========================================================================
+     7. Interactive Project Budget & Delivery Calculator
+     ========================================================================== */
+  const calcProjects = {
+    'landing': { name: 'Landing Page', basePrice: 690, baseDays: 4 },
+    'cardapio': { name: 'Cardápio Digital', basePrice: 550, baseDays: 3 },
+    'institucional': { name: 'Site Institucional', basePrice: 1190, baseDays: 8 },
+    'loja': { name: 'Loja Virtual / E-commerce', basePrice: 1890, baseDays: 14 },
+    'automacao': { name: 'Automação WhatsApp / IA', basePrice: 890, baseDays: 6 },
+    'custom': { name: 'Sistema Web Sob Medida', basePrice: 2490, baseDays: 20 }
+  };
+
+  let calcState = {
+    projectKey: 'landing',
+    addons: [],
+    speed: 'normal',
+    support: 'none'
+  };
+
+  const calcProjectOptions = document.querySelectorAll('.calc-opt[data-calc-project]');
+  const calcAddonChecks = document.querySelectorAll('.calc-addon-check');
+  const calcSpeedRadios = document.querySelectorAll('input[name="calc-speed"]');
+  const calcSupportRadios = document.querySelectorAll('input[name="calc-support"]');
+
+  const calcSumType = document.getElementById('calc-sum-type');
+  const calcSumAddons = document.getElementById('calc-sum-addons');
+  const calcSumSpeed = document.getElementById('calc-sum-speed');
+  const calcSumSupport = document.getElementById('calc-sum-support');
+  const calcEstimateVal = document.getElementById('calc-estimate-val');
+  const calcEstimateTime = document.getElementById('calc-estimate-time');
+  const calcSendWa = document.getElementById('calc-send-wa');
+
+  function calculateQuote() {
+    const proj = calcProjects[calcState.projectKey] || calcProjects['landing'];
+    let price = proj.basePrice;
+    let days = proj.baseDays;
+
+    // Addons
+    calcState.addons.forEach(addonVal => {
+      if (addonVal === 'cms') { price += 280; days += 2; }
+      if (addonVal === 'payment') { price += 350; days += 2; }
+      if (addonVal === 'chatbot') { price += 420; days += 3; }
+      if (addonVal === 'seo') { price += 220; days += 1; }
+      if (addonVal === 'sec') { price += 290; days += 2; }
+      if (addonVal === 'domain') { price += 180; }
+    });
+
+    // Speed
+    if (calcState.speed === 'urgent') {
+      price = Math.round(price * 1.25);
+      days = Math.max(2, Math.round(days * 0.6));
+    }
+
+    // Support note
+    let supportText = 'Nenhum plano incluso';
+    if (calcState.support === 'basico') supportText = 'Básico (+ R$ 90/mês)';
+    if (calcState.support === 'inter') supportText = 'Intermediário (+ R$ 180/mês)';
+    if (calcState.support === 'premium') supportText = 'Premium (+ R$ 350/mês)';
+
+    // Update UI
+    if (calcSumType) calcSumType.textContent = proj.name;
+    if (calcSumAddons) calcSumAddons.textContent = calcState.addons.length ? `${calcState.addons.length} recurso(s) extra(s)` : 'Sem extras';
+    if (calcSumSpeed) calcSumSpeed.textContent = calcState.speed === 'urgent' ? 'Prioritário / Expresso (-40% tempo)' : 'Prazo normal';
+    if (calcSumSupport) calcSumSupport.textContent = supportText;
+
+    if (calcEstimateVal) {
+      calcEstimateVal.textContent = `R$ ${price.toLocaleString('pt-BR')}`;
+    }
+    if (calcEstimateTime) {
+      calcEstimateTime.innerHTML = `
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span>Prazo estimado: ~${days} dias úteis</span>
+      `;
+    }
+
+    // Build WhatsApp message
+    const waBreakdown = 
+      `Olá, STS! Simulei meu projeto na calculadora do site:\n` +
+      `▪ Tipo: ${proj.name}\n` +
+      `▪ Extras selecionados: ${calcState.addons.length ? calcState.addons.join(', ') : 'Nenhum'}\n` +
+      `▪ Ritmo: ${calcState.speed === 'urgent' ? 'Expresso' : 'Padrão'}\n` +
+      `▪ Suporte pós-entrega: ${supportText}\n` +
+      `▪ Estimativa gerada: R$ ${price.toLocaleString('pt-BR')} (~${days} dias úteis)\n\n` +
+      `Gostaria de alinhar os detalhes e formalizar a proposta.`;
+
+    if (calcSendWa) {
+      calcSendWa.href = `https://wa.me/${STS_PHONE}?text=${encodeURIComponent(waBreakdown)}`;
+    }
+  }
+
+  // Bind project selection
+  calcProjectOptions.forEach(opt => {
+    opt.addEventListener('click', () => {
+      calcProjectOptions.forEach(o => o.classList.remove('selected'));
+      opt.classList.add('selected');
+      calcState.projectKey = opt.getAttribute('data-calc-project');
+      calculateQuote();
+    });
+  });
+
+  // Bind addons
+  calcAddonChecks.forEach(chk => {
+    chk.addEventListener('change', () => {
+      const val = chk.value;
+      if (chk.checked) {
+        if (!calcState.addons.includes(val)) calcState.addons.push(val);
+      } else {
+        calcState.addons = calcState.addons.filter(item => item !== val);
+      }
+      calculateQuote();
+    });
+  });
+
+  // Bind speed
+  calcSpeedRadios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (radio.checked) {
+        calcState.speed = radio.value;
+        calculateQuote();
+      }
+    });
+  });
+
+  // Bind support
+  calcSupportRadios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (radio.checked) {
+        calcState.support = radio.value;
+        calculateQuote();
+      }
+    });
+  });
+
+  calculateQuote();
+
+  /* ==========================================================================
+     8. Cybersecurity Live Interactive Auditor
+     ========================================================================== */
+  const runAuditBtn = document.getElementById('run-audit-btn');
+  const auditStatusText = document.getElementById('audit-status-text');
+  const auditItems = document.querySelectorAll('.audit-item');
+
+  if (runAuditBtn) {
+    runAuditBtn.addEventListener('click', () => {
+      runAuditBtn.disabled = true;
+      runAuditBtn.textContent = 'Executando auditoria...';
+      if (auditStatusText) auditStatusText.textContent = 'Diagnosticando camadas de segurança...';
+
+      let currentStep = 0;
+      auditItems.forEach(item => {
+        const badge = item.querySelector('.audit-badge');
+        if (badge) {
+          badge.textContent = 'Verificando...';
+          badge.style.color = '#38bdf8';
+          badge.style.borderColor = 'rgba(56, 189, 248, 0.3)';
+        }
+      });
+
+      const interval = setInterval(() => {
+        if (currentStep < auditItems.length) {
+          const item = auditItems[currentStep];
+          item.classList.add('active-test');
+          const badge = item.querySelector('.audit-badge');
+          if (badge) {
+            badge.textContent = '100% Protegido ✓';
+            badge.style.color = '#3ddc97';
+            badge.style.borderColor = 'rgba(61, 220, 151, 0.4)';
+          }
+          currentStep++;
+        } else {
+          clearInterval(interval);
+          runAuditBtn.disabled = false;
+          runAuditBtn.textContent = 'Refazer Auditoria Visual';
+          if (auditStatusText) auditStatusText.textContent = 'Auditoria concluída: Arquitetura STS 100% Aprovada!';
+          showToast('Auditoria simulada concluída! Todos os pilares de segurança validados.');
+        }
+      }, 350);
+    });
+  }
+
+  /* ==========================================================================
+     9. Interactive Portfolio Tabs & Mockup Showcase
+     ========================================================================== */
+  const portfolioCases = {
+    'food': {
+      title: 'Don Corleone Pizzaria Artesanal',
+      category: 'Cardápio Digital & Pedidos no WhatsApp',
+      desc: 'Eliminação de 100% dos custos com impressão física e economia de 18% em taxas de aplicativos de delivery com envio direto ao WhatsApp da cozinha.',
+      metric1Val: '99/100',
+      metric1Label: 'PageSpeed Mobile',
+      metric2Val: '+42%',
+      metric2Label: 'Aumento em vendas diretas',
+      screenPreview: `
+        <div style="background:var(--navy); color:#fff; padding:16px; border-radius:6px; margin-bottom:12px;">
+          <h4 style="margin:0 0 4px; font-size:1rem; color:#fff;">🍕 Don Corleone Menu</h4>
+          <span style="font-size:0.75rem; color:#3ddc97;">● Aberto agora · Pedido via WhatsApp</span>
+        </div>
+        <div style="border:1px solid var(--line); border-radius:6px; padding:12px; margin-bottom:8px; display:flex; justify-content:space-between; align-items:center;">
+          <div><b style="font-size:0.9rem;">Pizza Margherita Especial</b><br><small style="color:var(--mut);">Molho rústico, búfala e manjericão fresco</small></div>
+          <span style="color:var(--ok); font-weight:700; font-size:0.9rem;">R$ 64,90</span>
+        </div>
+        <div style="border:1px solid var(--line); border-radius:6px; padding:12px; display:flex; justify-content:space-between; align-items:center;">
+          <div><b style="font-size:0.9rem;">Pizza Parma & Rúcula</b><br><small style="color:var(--mut);">Prosciutto di Parma e lascas de parmesão</small></div>
+          <span style="color:var(--ok); font-weight:700; font-size:0.9rem;">R$ 78,00</span>
+        </div>
+      `
+    },
+    'b2b': {
+      title: 'Scalari & Associados Advocacia',
+      category: 'Landing Page de Alta Conversão & B2B',
+      desc: 'Página ultraveloz de captação de clientes jurídicos, integrada com agendamento direto e conformidade com código de ética da OAB e LGPD.',
+      metric1Val: '0.4s',
+      metric1Label: 'Tempo de carregamento',
+      metric2Val: '14.8%',
+      metric2Label: 'Taxa de conversão de cliques',
+      screenPreview: `
+        <div style="background:var(--navy-card); color:#fff; padding:16px; border-radius:6px; margin-bottom:12px; border-left:4px solid var(--blue);">
+          <span style="font-size:0.75rem; color:var(--sky-light); font-weight:700;">ESPECIALISTAS EM DIREITO TRIBUTÁRIO</span>
+          <h4 style="margin:4px 0 0; font-size:1.05rem; color:#fff;">Assessoria jurídica preventiva e contenciosa</h4>
+        </div>
+        <div style="background:var(--bg); border:1px solid var(--line); padding:14px; border-radius:6px; margin-bottom:8px;">
+          <small style="color:var(--mut); display:block; margin-bottom:4px;">Atendimento Imediato:</small>
+          <div style="display:flex; gap:8px;">
+            <input type="text" placeholder="Seu WhatsApp..." style="padding:6px 10px; font-size:0.8rem; border:1px solid var(--line); border-radius:4px; width:70%; background:var(--card);" readonly value="(19) 99833-2688">
+            <button class="btn btn-sm" style="padding:6px 12px; font-size:0.8rem; pointer-events:none;">Agendar</button>
+          </div>
+        </div>
+      `
+    },
+    'saas': {
+      title: 'NexFlow Automação Empresarial',
+      category: 'Sistema Web & Integração WhatsApp API',
+      desc: 'Plataforma para disparo e triagem de atendimento com inteligência artificial, sincronizada com banco de dados em nuvem e painel em tempo real.',
+      metric1Val: '100%',
+      metric1Label: 'Conformidade de Segurança',
+      metric2Val: '24/7',
+      metric2Label: 'Operação sem interrupções',
+      screenPreview: `
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:12px;">
+          <div style="background:var(--blue-subtle); padding:10px; border-radius:6px; border:1px solid var(--blue-border);">
+            <small style="color:var(--mut);">Atendimentos Hoje</small>
+            <b style="font-size:1.2rem; color:var(--blue); display:block;">1.428</b>
+          </div>
+          <div style="background:var(--ok-glow); padding:10px; border-radius:6px; border:1px solid rgba(18,163,107,0.3);">
+            <small style="color:var(--mut);">Tempo de Resposta</small>
+            <b style="font-size:1.2rem; color:var(--ok); display:block;">4 seg</b>
+          </div>
+        </div>
+        <div style="background:var(--card); border:1px solid var(--line); padding:10px; border-radius:6px; font-size:0.85rem;">
+          <span style="color:#3ddc97;">● API WhatsApp Cloud:</span> <span style="color:var(--mut);">Conectada e estável</span>
+        </div>
+      `
+    }
+  };
+
+  const portfolioTabBtns = document.querySelectorAll('.portfolio-tab-btn');
+  const caseTitle = document.getElementById('case-title');
+  const caseCategory = document.getElementById('case-category');
+  const caseDesc = document.getElementById('case-desc');
+  const caseMetric1Val = document.getElementById('case-m1-val');
+  const caseMetric1Label = document.getElementById('case-m1-lbl');
+  const caseMetric2Val = document.getElementById('case-m2-val');
+  const caseMetric2Label = document.getElementById('case-m2-lbl');
+  const casePreviewBody = document.getElementById('case-preview-body');
+
+  function renderCase(key) {
+    const item = portfolioCases[key];
+    if (!item) return;
+
+    if (caseTitle) caseTitle.textContent = item.title;
+    if (caseCategory) caseCategory.textContent = item.category;
+    if (caseDesc) caseDesc.textContent = item.desc;
+    if (caseMetric1Val) caseMetric1Val.textContent = item.metric1Val;
+    if (caseMetric1Label) caseMetric1Label.textContent = item.metric1Label;
+    if (caseMetric2Val) caseMetric2Val.textContent = item.metric2Val;
+    if (caseMetric2Label) caseMetric2Label.textContent = item.metric2Label;
+    if (casePreviewBody) casePreviewBody.innerHTML = item.screenPreview;
+  }
+
+  portfolioTabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      portfolioTabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const key = btn.getAttribute('data-case');
+      renderCase(key);
+    });
+  });
+
+  // Render initial case
+  renderCase('food');
+
+  /* ==========================================================================
+     10. Interactive FAQ Accordion
+     ========================================================================== */
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const questionBtn = item.querySelector('.faq-question');
+    if (!questionBtn) return;
+
+    questionBtn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+
+      // Close other items
+      faqItems.forEach(other => {
+        other.classList.remove('open');
+        const otherBtn = other.querySelector('.faq-question');
+        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        item.classList.add('open');
+        questionBtn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  /* ==========================================================================
+     11. Contact Form with Phone Mask, Validation & Multiple Submit Modes
+     ========================================================================== */
+  const contactForm = document.getElementById('contact-form');
+  const phoneInput = document.getElementById('form-phone');
+  const btnSubmitWa = document.getElementById('btn-submit-wa');
+  const btnSubmitEmail = document.getElementById('btn-submit-email');
+
+  // Input phone mask: (99) 99999-9999
+  if (phoneInput) {
+    phoneInput.addEventListener('input', (e) => {
+      let val = e.target.value.replace(/\D/g, '');
+      if (val.length > 11) val = val.slice(0, 11);
+
+      if (val.length > 6) {
+        val = `(${val.slice(0, 2)}) ${val.slice(2, 7)}-${val.slice(7)}`;
+      } else if (val.length > 2) {
+        val = `(${val.slice(0, 2)}) ${val.slice(2)}`;
+      } else if (val.length > 0) {
+        val = `(${val}`;
+      }
+      e.target.value = val;
+    });
+  }
+
+  function validateContactForm() {
+    const name = document.getElementById('form-name')?.value.trim();
+    const phone = document.getElementById('form-phone')?.value.trim();
+    const email = document.getElementById('form-email')?.value.trim();
+    const service = document.getElementById('form-service')?.value;
+    const msg = document.getElementById('form-msg')?.value.trim();
+
+    if (!name || name.length < 3) {
+      showToast('Por favor, informe seu nome completo.', 'error');
+      document.getElementById('form-name')?.focus();
+      return null;
+    }
+
+    if (!phone || phone.replace(/\D/g, '').length < 10) {
+      showToast('Informe um número de WhatsApp válido com DDD.', 'error');
+      document.getElementById('form-phone')?.focus();
+      return null;
+    }
+
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showToast('E-mail em formato inválido.', 'error');
+      document.getElementById('form-email')?.focus();
+      return null;
+    }
+
+    return { name, phone, email, service: service || 'Não especificado', msg: msg || 'Gostaria de um orçamento detalhado.' };
+  }
+
+  if (btnSubmitWa) {
+    btnSubmitWa.addEventListener('click', (e) => {
+      e.preventDefault();
+      const data = validateContactForm();
+      if (!data) return;
+
+      const formattedMsg = 
+        `Olá, STS! Vim pelo formulário de contato do site:\n\n` +
+        `👤 *Nome:* ${data.name}\n` +
+        `📱 *WhatsApp:* ${data.phone}\n` +
+        `📧 *E-mail:* ${data.email || 'Não informado'}\n` +
+        `🎯 *Serviço de interesse:* ${data.service}\n` +
+        `📝 *Detalhes do projeto:* ${data.msg}\n\n` +
+        `Aguardo retorno para conversarmos sobre a proposta!`;
+
+      const targetUrl = `https://wa.me/${STS_PHONE}?text=${encodeURIComponent(formattedMsg)}`;
+      showToast('Abrindo WhatsApp com sua proposta formatada...');
+      window.open(targetUrl, '_blank', 'noopener,noreferrer');
+    });
+  }
+
+  if (btnSubmitEmail) {
+    btnSubmitEmail.addEventListener('click', (e) => {
+      e.preventDefault();
+      const data = validateContactForm();
+      if (!data) return;
+
+      // Save lead locally to simulate CRM persistence
+      const leads = JSON.parse(localStorage.getItem('sts_captured_leads') || '[]');
+      leads.push({ ...data, date: new Date().toISOString() });
+      localStorage.setItem('sts_captured_leads', JSON.stringify(leads));
+
+      btnSubmitEmail.disabled = true;
+      btnSubmitEmail.textContent = 'Enviando...';
+
+      setTimeout(() => {
+        btnSubmitEmail.disabled = false;
+        btnSubmitEmail.textContent = 'Solicitar Proposta por E-mail';
+        showToast('Proposta solicitada com sucesso! Entraremos em contato em até 24h.');
+        contactForm.reset();
+      }, 1000);
+    });
+  }
+
+  /* ==========================================================================
+     12. Floating WhatsApp Widget & Popover
+     ========================================================================== */
+  const waFloatingBtn = document.getElementById('wa-floating-btn');
+  const waPopover = document.getElementById('wa-popover');
+  const waPopoverClose = document.getElementById('wa-popover-close');
+  const waQuickBtns = document.querySelectorAll('.wa-quick-btn');
+
+  if (waFloatingBtn && waPopover) {
+    waFloatingBtn.addEventListener('click', () => {
+      waPopover.classList.toggle('active');
+    });
+
+    if (waPopoverClose) {
+      waPopoverClose.addEventListener('click', () => {
+        waPopover.classList.remove('active');
+      });
+    }
+
+    waQuickBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const text = btn.getAttribute('data-msg');
+        const url = `https://wa.me/${STS_PHONE}?text=${encodeURIComponent(text)}`;
+        waPopover.classList.remove('active');
+        window.open(url, '_blank', 'noopener,noreferrer');
+      });
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (waPopover.classList.contains('active') &&
+          !waPopover.contains(e.target) &&
+          !waFloatingBtn.contains(e.target)) {
+        waPopover.classList.remove('active');
+      }
+    });
+  }
+
+  // Pre-load dynamic support plan buttons
+  document.querySelectorAll('[data-plan-btn]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const planName = btn.getAttribute('data-plan-btn');
+      const text = `Olá, STS! Tenho interesse no Plano de Suporte "${planName}" para manter meu projeto seguro e atualizado.`;
+      window.open(`https://wa.me/${STS_PHONE}?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+    });
+  });
+
+  console.log('STS Scalari Tech System - Aplicação inicializada com sucesso.');
+});
+
+</script>
+</body>
+</html>
